@@ -1,0 +1,342 @@
+/* home page */
+
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+    color: #0E457B;
+}
+
+.mainContainer{
+    /* background: rgb(179, 236, 255);  */
+    width: 80vw;
+    margin-left: 10vw;
+    margin-right: 10vw;
+    margin-top: 3vh;
+}
+
+/* header */
+
+.header{
+    width:100%;
+    height: 8vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header h1{
+    width: 150.57px;
+    font-weight: 900;
+    color: #0E457B; 
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+}
+
+.search-bar{
+    background: red;
+    /* flex: 1; */
+    display: flex;
+    align-items: center;
+    background-color: #D3D3D3;
+    border-radius: 40px;
+    padding: 5px;
+    width: 30%;
+    height:60%;
+}
+
+.search-bar input{
+    flex: 1;
+    border: none;
+    background: none;
+    padding: 5px;
+}
+
+.search-bar input:focus{
+    border: #0E457B;
+    outline: none;
+}
+/* 
+.search-bar input::-webkit-clear-button {
+    font-size: 80px;
+    padding: 4px;
+  } */
+
+
+.search-bar button {
+    /* margin-left: 5px; */
+    padding: 1em 2em;
+    border: none;
+    background: none;
+    cursor: pointer;
+    transition: all ease 0.5s;
+}
+
+
+.search-bar button:hover{
+    background: #0E457B;
+    color: white;
+    border-radius: 50px;
+}
+
+.nav-btns{
+    /* border: 2px solid black; */
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.nav-btns a{
+    height: 40px; 
+    width: 100px;
+    /* border: 2px solid black; */
+    background: none;
+    overflow: hidden;
+}
+
+.nav-btns button{
+    width: 90%; 
+    height: 90%;
+    border: none;
+    cursor: pointer;
+    background: none;
+}
+
+
+#BtnSell{
+    width: 100%; 
+    height: 100%;
+    font-size: 2em;
+    text-align: center;
+    background: #FFCB12;
+    border-radius: 25px;
+    color: #0E457B; 
+}
+
+.nav-btns i{
+    /* border: 2px solid black; */
+    font-size: 2.7em;
+    color: #0E457B; 
+}
+
+
+/* Hero Section */
+
+.hero{
+    /* background: yellowgreen; */
+    margin-top: 5vh;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+.hero-content{
+    position: absolute;
+    z-index: 1;
+    font-family: 'Poppins', sans-serif;
+    color: #0E457B;
+    font-size: 3.7vh;
+}
+
+.head1 h6{
+    font-weight: bolder;
+}
+
+.hero-heads{
+    letter-spacing: 3px;
+}
+
+.head2{
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+}
+
+.sub-head h6{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+}
+
+#Join-Cta{
+    margin-top: 3vh;
+    height: 7vh;
+    width: 9vw;
+    border-radius: 50px;
+    font-size: 70%;
+    font-weight: 600;
+    color: white;
+    border: none;
+    background: #0E457B;
+    cursor: pointer;
+}
+
+#Deals-Cta{
+    margin-top: 3vh;
+    height: 7vh;
+    width: 12vw;
+    border-radius: 50px;
+    font-size: 70%;
+    font-weight: 600;
+    color: #0E457B;
+    border: none;
+    background: transparent;
+    border: 5px solid #0E457B;
+    cursor: pointer;
+}
+
+.hero img{
+    height: 75vh;
+    width: 60vw; 
+    border-radius: 50%; 
+    object-fit: cover;
+    /* float: right; */
+    /* justify-content: flex-end; */
+    transform: translateX(25%);
+    /* transform: translateY(-30%); */  
+}
+
+
+/* Category Section */
+
+.categories{
+    margin-top: 5vh;
+    width: 100%;
+    text-align: center;
+}
+
+.categories h1{
+    font-size: 5vh; 
+    font-style: normal;
+    color: #0E457B;
+}
+
+.cat{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 80%;
+    height: 40vh;
+    margin-left: 10%;
+    margin-right: 10%;
+    /* background: lightblue; */
+    overflow: hidden;
+}
+
+.cat1{
+    /* background-image: url(images/electonics.jpg); */
+    width: 22%;
+    height: 90%;
+    transition: all ease 0.3s ;
+    /* background-color: red; */
+}
+
+.cat1 img{
+    width: 100%;
+    height: 90%;
+    opacity: 0.8;
+}
+
+.cat1:hover{
+    transform: scale(1.1);
+}
+
+
+/* why choose us */
+.whyUs{
+    margin-top: 5vh;
+    display: flex;
+    flex-direction: column;
+    /* background-color: rgb(213, 115, 115); */
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    text-align: center;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+.whyUs h1{
+    font-size: 5vh; 
+    font-style: normal;
+    color: #0E457B;
+}
+
+.reasons{
+    display: flex;
+    width: 100%;
+    margin-top: 5vh;
+    /* background-color: rgb(137, 172, 48); */
+    /* align-items: center; */
+    justify-content: space-between;
+}
+
+.reason{
+    width: 33%;
+    /* background-color: rgb(54, 138, 143); */
+    font-size: 24px;
+    font-style: normal;
+    color: #0E457B;
+}
+
+/* SellerCta */
+
+.becomeSellerCta{
+    text-align: center;
+    margin: auto;
+    background: linear-gradient(145deg, white, #FFCB12);
+    margin-top: 5vh;
+    font-size: 24px;
+    font-style: normal;
+    color: #0E457B;
+}
+
+.becomeSellerCta h1,
+.becomeSellerCta p,
+.becomeSellerCta a {
+    width: 30%;
+    margin: auto;
+    margin-bottom: 20px;
+} 
+
+.becomeSellerCta h1{
+    margin-top: 200px;
+}
+
+.becomeSellerCta button{
+    width: 35%;
+    height: 7vh;
+    border-radius: 50px;
+    font-size: 32px;
+    font-weight: 600;
+    color: white;
+    border: none;
+    background: #0E457B;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* signup page */
+/* Login Page */
+/* Category Page */
+/* User Profile Page */
+/* Product page */
+/* cart page */
+/* payment page */
+/*  */
