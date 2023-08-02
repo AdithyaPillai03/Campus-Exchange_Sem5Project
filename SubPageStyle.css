@@ -1,0 +1,191 @@
+
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+    color: #0E457B;
+}
+
+.mainContainer{
+    /* background: red;  */
+    /* background: rgb(179, 236, 255);  */
+    width: 90vw;
+    margin-left: 5vw;
+    margin-right: 5vw;
+    margin-top: 3vh;
+}
+
+/* header */
+
+.header{
+    /* background: rgb(179, 236, 255); */
+    width:89%;
+    margin-left: 5.5%;
+    margin-right: 5.5%;
+    height: 8vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header h1{
+    width: 150.57px;
+    font-weight: 900;
+    color: #0E457B; 
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+}
+
+.search-bar{
+    /* background: red; */
+    /* flex: 1; */
+    display: flex;
+    align-items: center;
+    background-color: #D3D3D3;
+    border-radius: 40px;
+    padding: 5px;
+    width: 30%;
+    height:60%;
+}
+
+.search-bar input{
+    flex: 1;
+    border: none;
+    background: none;
+    padding: 5px;
+}
+
+.search-bar input:focus{
+    border: #0E457B;
+    outline: none;
+}
+/* 
+.search-bar input::-webkit-clear-button {
+    font-size: 80px;
+    padding: 4px;
+  } */
+
+.search-bar button {
+    /* margin-left: 5px; */
+    padding: 1em 2em;
+    border: none;
+    background: none;
+    cursor: pointer;
+    transition: all ease 0.5s;
+}
+
+.search-bar button:hover{
+    background: #0E457B;
+    color: white;
+    border-radius: 50px;
+}
+
+.nav-btns{
+    /* border: 2px solid black; */
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.nav-btns a{
+    height: 40px; 
+    width: 100px;
+    /* border: 2px solid black; */
+    background: none;
+    overflow: hidden;
+}
+
+.nav-btns button{
+    width: 90%; 
+    height: 90%;
+    border: none;
+    cursor: pointer;
+    background: none;
+}
+
+
+#BtnSell{
+    width: 100%; 
+    height: 100%;
+    font-size: 2em;
+    text-align: center;
+    background: #FFCB12;
+    border-radius: 25px;
+    color: #0E457B; 
+}
+
+.nav-btns i{
+    /* border: 2px solid black; */
+    font-size: 2.7em;
+    color: #0E457B; 
+}
+
+
+/* Alldeals Page */
+
+/* productCategories */
+
+.productCategories{
+    margin-top: 10vh;
+    width: 100%;
+    font-size: 24px;
+    padding-bottom: 20px;
+}
+
+.images{
+    display: flex;
+    width: 100%;
+    height: 18vw;
+    align-items: center;
+    justify-content: space-between;
+    /* background: lightblue; */
+}
+
+.images a{
+    width: 24%;
+    height: 100%;
+    /* background: lightgreen; */
+    
+}
+
+.imgcontainer{
+    /* background: lightcoral; */
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    margin-top: 20px;
+    transition: box-shadow 0.3s ease;
+}
+
+.imgcontainer:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Light shadow on hover */
+}
+
+.imgcontainer img{
+    width: 80%;
+    height: 80%;
+    object-fit: cover;
+    margin: auto;
+}
+
+.ElectronicsCategory{
+    margin-top: 5vh;
+}
+
+.BooksCategory{
+    margin-top: 5vh;
+}
+
+.FashionCategory{
+    margin-top: 5vh;
+}
+
+.SportsCategory{
+    margin-top: 5vh;
+}

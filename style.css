@@ -186,7 +186,15 @@ a{
     background: transparent;
     border: 5px solid #0E457B;
     cursor: pointer;
+    transition: all ease 0.5s;
 }
+
+#Deals-Cta:hover{
+    border: none;
+    background: #FFCB12;
+    color: #0E457B;
+}
+
 
 .hero img{
     height: 75vh;
@@ -330,11 +338,12 @@ a{
 
 
 
-
-
 /* signup page */
 /* Login Page */
 /* Category Page */
+
+
+
 /* User Profile Page */
 /* Product page */
 /* cart page */
