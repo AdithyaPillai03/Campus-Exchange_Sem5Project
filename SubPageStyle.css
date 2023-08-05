@@ -9,13 +9,68 @@ a{
     color: #0E457B;
 }
 
+body{
+    margin: 0;
+    padding: 0;
+    display: block;
+    overflow: auto;
+    overflow-x: hidden;
+    /* background: lightsalmon; */
+}
+/* 
+html,body{
+    height:100%;
+} */
+
+.ellipse-1 {
+    position: absolute;
+    background-color: #FFCB12;
+    z-index: -1;
+    width: 1200px;
+    height: 700px;
+    top: 20%;
+    left: -15%;
+    border-radius: 50%;
+    transform: rotate(32deg);
+}
+
+.ellipse-2 {
+    position: absolute;
+    background-color: rgb(255, 203, 18);
+    z-index: -1;
+    width: 1200px;
+    height: 600px;
+    top: 130vh;
+    right: -24vw;
+    border-radius: 50%;
+    transform: rotate(323deg);
+}
+
+/* .ellipse-3 {
+    position: absolute;
+    background-color: #6361d5;
+    z-index: -1;
+    width: 2000px;
+    height: 800px;
+    bottom: 10%;
+    left: -80%;
+    border-radius: 50%;
+    transform: rotate(-15deg);
+} */
+
+
 .mainContainer{
     /* background: red;  */
     /* background: rgb(179, 236, 255);  */
+    /* position: relative; */
+    /* overflow-y: auto; */
+    /* z-index: 1; */
     width: 90vw;
     margin-left: 5vw;
     margin-right: 5vw;
     margin-top: 3vh;
+    height: 100%;
+    /* flex: 1; */
 }
 
 /* header */
@@ -135,6 +190,11 @@ a{
     padding-bottom: 20px;
 }
 
+.productCategories h1{
+    font-style: normal;
+    color: #0E457B;
+}
+
 .images{
     display: flex;
     width: 100%;
@@ -164,7 +224,7 @@ a{
 }
 
 .imgcontainer:hover {
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Light shadow on hover */
+    box-shadow: 0 0 10px rgba(109, 108, 108, 0.3); 
 }
 
 .imgcontainer img{
@@ -172,6 +232,12 @@ a{
     height: 80%;
     object-fit: cover;
     margin: auto;
+}
+
+.imgcontainer h6{
+    font-size: 30px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
 }
 
 .ElectronicsCategory{
