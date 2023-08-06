@@ -1,0 +1,93 @@
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+}
+
+body {
+background: #FFD952;
+/* height: 100vh; */
+font-size: 2.1vh;
+}
+
+.heading {
+text-align: center;
+margin-top: 3%;
+margin-bottom: 3px   ;
+line-height: 2;
+color: #0E457B;
+}
+
+.heading h1{
+font-family: 'Playfair Display', serif;
+font-weight: bolder;
+font-style: italic;
+}
+
+.heading h4{
+font-family: 'Poppins', sans-serif;
+}
+
+.signUpForm{
+    background: #d3d3d3;
+    width: 50%;
+    height: 80vh;
+    display: flex;
+    align-items: centre;
+    margin: auto;
+    border-radius: 50px;
+}
+
+form{
+/*   background: lightgreen; */
+    width : 80%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    font-size: 35px;
+}
+
+form label{
+    margin-top: 30px;
+}
+
+form button, input{
+    width : 90%;
+    height: 10%;
+    border-radius: 20px;
+}
+
+form input{
+    font-size: 35px;
+}
+
+form button{
+    margin-top: 40px;
+    border: none;
+background: #0E457B;
+color: white;
+font-family: 'Playfair Display', serif;
+font-weight: 700;
+font-size: 3rem;
+letter-spacing: 5px;
+border-radius: 20px;
+cursor: pointer;
+transition: transform 0.2s ease;
+}
+
+button:hover{
+transform: scale(0.9);
+}
+
+
+form h6{
+    font-size: 35px;
+    text-align: centre;
+    margin-top: 30px;
+}

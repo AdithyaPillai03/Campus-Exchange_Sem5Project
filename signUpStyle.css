@@ -1,0 +1,113 @@
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+}
+
+body {
+background: #FFD952;
+height: 100vh;
+font-size: 2.1vh;
+}
+
+.heading {
+text-align: center;
+margin-top: 2%;
+line-height: 2;
+color: #0E457B;
+}
+
+.heading h1{
+font-family: 'Playfair Display', serif;
+font-weight: bolder;
+font-style: italic;
+color: #0E457B;
+}
+
+.heading h4{
+font-family: 'Poppins', sans-serif;
+}
+
+.signUpForm {
+background: #D9D9D9;
+height: 80%;
+width: 40%;
+margin: 0 auto;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+border-radius: 50px;
+}
+
+form {
+/* background: limegreen; */
+/* width: 80%;
+height: 80%; */
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+}
+
+.formGrp,
+form p,
+button,
+.formGrp h6 {
+width: 90%; /* Adjust the width to take up the full available space */
+margin-bottom: 25px;
+}
+
+p{
+font-family: 'Poppins', sans-serif;
+font-weight: 400;
+}
+
+
+button {
+width: 80%; /* Adjust the width to take up the full available space */
+border: none;
+background: #0E457B;
+color: white;
+font-family: 'Playfair Display', serif;
+font-weight: 700;
+font-size: 3rem;
+letter-spacing: 5px;
+border-radius: 20px;
+cursor: pointer;
+transition: transform 0.2s ease;
+}
+
+button:hover{
+transform: scale(0.9);
+}
+
+.formGrp label {
+font-family: 'Playfair Display', serif;
+font-weight: 500;
+margin-bottom: 15px;
+}
+
+.formGrp input,
+select {
+width: 90%; /* Adjust the width to take up the full available space */
+height: 50px;
+padding: 10px;
+border: none;
+font-size: 24px;
+border-radius: 50px;
+}
+h6{
+font-size: 2.1vh;
+font-family: 'Poppins', sans-serif;
+font-weight: 400;
+}
+
+span{
+font-style: oblique;
+font-weight: bold;
+}
