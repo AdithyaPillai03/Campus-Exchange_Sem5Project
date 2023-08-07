@@ -173,6 +173,11 @@ a{
     border: none;
     background: #0E457B;
     cursor: pointer;
+    transition: all ease 0.2s;
+}
+
+#Join-Cta:hover{
+    background: #205e9c;
 }
 
 #Deals-Cta{

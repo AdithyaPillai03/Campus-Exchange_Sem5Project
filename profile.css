@@ -1,0 +1,154 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+    
+a{
+    text-decoration: none;
+}
+    
+body{
+    margin: 0;
+    padding: 0;
+    display: block;
+    overflow: auto;
+    overflow-x: hidden;
+    /* background: lightsalmon; */
+}
+/* 
+html,body{
+    height:100%;
+} */
+
+.ellipse-1 {
+    position: absolute;
+    background-color: #FFCB12;
+    z-index: -1;
+    width: 1000px;
+    height: 500px;
+    top: 10%;
+    left: -15%;
+    border-radius: 50%;
+    transform: rotate(240deg);
+}
+
+.ellipse-2 {
+    position: absolute;
+    background-color: rgb(255, 203, 18);
+    z-index: -1;
+    width: 1000px;
+    height: 500px;
+    top: 70vh;
+    right: -24vw;
+    border-radius: 50%;
+    transform: rotate(328deg);
+}
+
+
+.mainContainer{
+    width: 90%;
+    padding: 20px;
+    margin-top: 5%;
+    margin: auto;   
+    /* background: lightcoral; */
+}
+
+h1{
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    text-align: center;
+    font-size: 5vh;
+    color: #0E457B;
+}
+
+.details{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 3vh;
+    margin-top: 5%;
+}
+
+.details h6{
+    font-family: 'Poppins', sans-serif;
+    font-size: 26px;
+    /* color: #0E457B; */
+}
+
+#passChangeBtn{
+    border-radius: 25px;
+    height: 100%;
+    background: #0E457B;
+    color: white;
+    cursor: pointer;
+    transition: all ease-out 0.1s;
+}
+
+#passChangeBtn:hover{
+    background-color: #125293;
+}
+
+
+form{
+    text-align: center;
+    /* background: lightblue; */
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* margin-top: 2%; */
+    padding: 2%;
+}
+
+label{
+    font-size: 24px;
+}
+
+input{
+    margin: 20px;
+    height: 30px;
+    background: #d3d3d3;
+    border-radius: 25px;
+    width: 300px;
+    font-size: 28px;
+}
+
+form button{
+    border-radius: 25px;
+    height: 3vh;
+    width: 100px;
+    background: #0E457B;
+    color: white;
+    transition: all ease-out 0.1s;
+}
+
+form button:hover{
+    background-color: #125293;
+}
+
+
+/* Purchase History */
+
+.purchaseHistory{
+    width: 100%;
+    margin-top: 5%;
+    padding: 2%;
+}
+
+.purchaseHistory h3{
+    font-family: 'Poppins', sans-serif;
+    font-size: 36px;
+    color: #0E457B;
+}
+
+.purchaseDetails{
+    margin-top: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.purchaseDetails p{
+    font-family: 'Poppins', sans-serif;
+    font-size: 26px;
+    color: #0E457B;
+}
