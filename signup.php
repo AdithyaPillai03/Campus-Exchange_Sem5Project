@@ -14,8 +14,8 @@
     if ($_SERVER['REQUEST_METHOD'] == 'POST'){
         $name = $_POST['name'];
         $email = $_POST['email'];
-        $rollNo = $_POST['rollNo'];
         $password = $_POST['password'];
+        $class = $_POST['classSelect'];
 
         $servername = "localhost";
         $username = "root";
@@ -31,20 +31,20 @@
         else{ 
             // Submit these to a database
             // Sql query to be executed 
-            $sql = "INSERT INTO `user` (`name`, `email`, `password`, `type`) VALUES ('$name', '$email', '$password', 'user')";
+            $sql = "INSERT INTO `user` (`name`, `email`, `password`, `type`, `class`) VALUES ('$name', '$email', '$password', 'user', '$class')";
             $result = mysqli_query($conn, $sql);
 
             if ($result){
-                echo "your name is '$name' , email is '$email' and roll number is '$rollNo'";
+                echo "your name is '$name' , email is '$email' .";
                 echo "Your data has been successfully stored in our database";
             }
     }
-    header("Location: login.html", true, 303);
+    header("Location: login.php", true, 303);
     exit();
 }
 ?>
     <div class="heading">
-        <a href="index.html"><h1>Campus Exchange</h1></a>
+        <a href="index.php"><h1>Campus Exchange</h1></a>
         <h4>Join the Student Community: Connect, Earn, and Thrive!</h4>
     </div>
         <div class="signUpForm">
@@ -59,7 +59,7 @@
                 </div>
                 <div class="formGrp">
                     <label for="classSelect">Select class:</label>
-                    <select id="classSelect">
+                    <select id="classSelect" name="classSelect">
                         <option value="fycs">F.Y.Bsc CS</option>
                         <option value="fybcom">F.Y.BCOM</option>
                         <option value="fyit">F.Y.Bsc IT</option>
@@ -68,20 +68,23 @@
                       </select>
                 </div>
                 <div class="formGrp">
-                    <label for="rollNo">Enter Roll No.:</label>
-                    <input type="text" name="rollNo" class="rollNo" id="rollNo" required>
-                </div>
-                <div class="formGrp">
                     <label for="password">Enter Password: (6 or more charachters)</label>
                     <input type="password" name="password" class="password" id="password" required>
                 </div>
                 <p>By clicking on join now, you accept Campus Exchange’s <span>user agreement,privacy policy and cookie policy</span></p>
-                <button type="submit">JOIN NOW</button>
-                <h6>Have an Account? <a href="login.html">Sign In</a></h6>
+                <button type="submit" id="signUpBtn">JOIN NOW</button>
+                <h6>Have an Account? <a href="login.php">Sign In</a></h6>
+                <h6>Wanna create a seller Account? <a href="sellerSignup.php">Seller Sign In</a></h6>
             </form>
         </div>
     </div>
-    
+    <script>
+        var btn = document.getElementById('signUpBtn');
+        var pass = document.getElementById('password');
+        btn.addEventListener("click", function() {
+            console.log(pass.value);
+        });
+        </script>
 </body>
 </html>
 
