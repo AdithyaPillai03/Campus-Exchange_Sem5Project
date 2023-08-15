@@ -17,30 +17,30 @@
 
     <div class="mainContainer">
         <div class="header">
-            <a href="index.html">
+            <a href="index.php">
                 <h1>Campus Exchange</h1>
             </a>
             <div class="search-bar">
                 <input type="search" id="search-input" placeholder="Search for Products.. ">
-                <a href="products.html"><button type="submit" id="search-btn">Search</button></a>
+                <a href="products.php"><button type="submit" id="search-btn">Search</button></a>
             </div>
             <div class="nav-btns">
-                <a href="sellerProfile.html"><button id="BtnSell">Sell</button></a>
-                <a href="home.html"><button><i class="fa-solid fa-cart-shopping"></i></button></a>
-                <a href="userProfile.html"><button><i class="fa-solid fa-user"></i></button></a>
+                <a href="sellerProfile.php"><button id="BtnSell">Sell</button></a>
+                <a href="home.php"><button><i class="fa-solid fa-cart-shopping"></i></button></a>
+                <a href="userProfile.php"><button><i class="fa-solid fa-user"></i></button></a>
             </div>
         </div>
         <div class="Category">
             <h1>Shop Sports</h1>
             <div class="row">
-                <a href="cricket.html">
+                <a href="cricket.php">
                     <div class="imgcontainer">
                         <img src="images/cricketBat.png" alt="b">
                         <h6>Cricket</h6>
                     </div>
                 </a>
                 
-                <a href="badminton.html">
+                <a href="badminton.php">
                     <div class="imgcontainer">
                         <img src="images/badminton2.png" alt="b">
                         <h6>Badminton</h6>
@@ -48,14 +48,14 @@
                 </a>
             </div>
             <div class="row">
-                <a href="cycles.html">
+                <a href="cycles.php">
                     <div class="imgcontainer">
                         <img src="images/cycling.png" alt="b">
                         <h6>Cycling</h6>
                     </div>
                 </a>
                 
-                <a href="gym.html">
+                <a href="gym.php">
                     <div class="imgcontainer">
                         <img src="images/homeGym.png" alt="b">
                         <h6>Gym</h6>

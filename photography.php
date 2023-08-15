@@ -16,23 +16,23 @@
     
     <div class="mainContainer">
         <div class="header">
-            <a href="index.html">
+            <a href="index.php">
                 <h1>Campus Exchange</h1>
             </a>
             <div class="search-bar">
                 <input type="search" id="search-input" placeholder="Search for Products.. ">
-                <a href="products.html"><button type="submit" id="search-btn">Search</button></a>
+                <a href="products.php"><button type="submit" id="search-btn">Search</button></a>
             </div>
             <div class="nav-btns">
-                <a href="sellerProfile.html"><button id="BtnSell">Sell</button></a>
-                <a href="cart.html"><button><i class="fa-solid fa-cart-shopping"></i></button></a>
-                <a href="userProfile.html"><button><i class="fa-solid fa-user"></i></button></a>
+                <a href="sellerProfile.php"><button id="BtnSell">Sell</button></a>
+                <a href="cart.php"><button><i class="fa-solid fa-cart-shopping"></i></button></a>
+                <a href="userProfile.php"><button><i class="fa-solid fa-user"></i></button></a>
             </div>
         </div>
         <div class="Category">
             <h1>PHOTOGRAPHY</h1>
             <div class="row">
-                    <a href="canonEOSm50.html">
+                    <a href="canonEOSm50.php">
                         <div class="imgcontainer">
                             <img src="images/canonEOSm50.png" alt="canon eos m50">                        
                             <h6>Canon EOS M50 Mark II</h6>
@@ -40,7 +40,7 @@
                         </div>
                     </a>
                     
-                    <a href="sonyAlpha7.html">
+                    <a href="sonyAlpha7.php">
                         <div class="imgcontainer">
                             <img src="images/sonyAlpha7.png" alt="SONY ZV-E10">
                             <h6>SONY ZV-E10 Mirrorless Camera</h6>

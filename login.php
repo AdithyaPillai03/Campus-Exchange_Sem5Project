@@ -11,7 +11,7 @@
 </head>
 <body>
     <div class="heading">
-        <a href="index.html"><h1>Campus Exchange</h1></a>
+        <a href="index.php"><h1>Campus Exchange</h1></a>
         <h4>Join the Student Community: Connect, Earn, and Thrive!</h4>
     </div>
     <div class="signUpForm">
@@ -21,7 +21,7 @@
               <label for="password">Enter Password: (6 or more charachters)</label>
               <input type="password" id="password" required>
             <button type="submit">LOGIN</button>
-            <h6>Don't have an Account? <a href="signup.html">Join Now</a></h6>
+            <h6>Don't have an Account? <a href="signup.php">Join Now</a></h6>
         </form>
     </div>
 </body>

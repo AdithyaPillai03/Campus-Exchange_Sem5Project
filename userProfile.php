@@ -16,7 +16,7 @@
     <div class="ellipse-2"></div>
 
     <div class="mainContainer">
-        <a href="index.html"><h1>Campus Exchange</h1></a>
+        <a href="index.php"><h1>Campus Exchange</h1></a>
         <div class="details">
             <h6 id="username">Adithya Pillai</h6>
             <h6 id="email">adiurpillai@gmail.com</h6>

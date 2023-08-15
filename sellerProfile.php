@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Campus Exchange</title>
+    <title>Seller Profile | Campus Exchange</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,7 +16,7 @@
     <div class="ellipse-2"></div>
 
     <div class="mainContainer">
-        <a href="index.html"><h1>Campus Exchange</h1></a>
+        <a href="index.php"><h1>Campus Exchange</h1></a>
         <div class="details">
             <h6 id="username">Adithya Pillai</h6>
             <h6 id="email">adiurpillai@gmail.com</h6>

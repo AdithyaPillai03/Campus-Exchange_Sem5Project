@@ -33,7 +33,7 @@ font-family: 'Poppins', sans-serif;
 }
 
 .signUpForm {
-background: #D9D9D9;
+background: #d3d3d3;
 height: 80%;
 width: 40%;
 margin: 0 auto;
@@ -95,10 +95,10 @@ margin-bottom: 15px;
 .formGrp input,
 select {
 width: 90%; /* Adjust the width to take up the full available space */
-height: 50px;
-padding: 10px;
+height: 30px;
+padding: 5px;
 border: none;
-font-size: 24px;
+font-size: 20px;
 border-radius: 50px;
 }
 h6{
