@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Campus Exchange</title>
+    <title>Campus Exchange | Cricket</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,8 +13,7 @@
 <body>
 
     <div class="ellipse-1"></div>
-    <div class="ellipse-2"></div>
-
+    
     <div class="mainContainer">
         <div class="header">
             <a href="index.html">
@@ -25,45 +24,30 @@
                 <a href="products.html"><button type="submit" id="search-btn">Search</button></a>
             </div>
             <div class="nav-btns">
-                <a href="home.html"><button id="BtnSell">Sell</button></a>
-                <a href="cart.html"><button><i class="fa-solid fa-cart-shopping"></i></button></a>
+                <a href="sellerProfile.html"><button id="BtnSell">Sell</button></a>
+                <a href="home.html"><button><i class="fa-solid fa-cart-shopping"></i></button></a>
                 <a href="userProfile.html"><button><i class="fa-solid fa-user"></i></button></a>
             </div>
         </div>
         <div class="Category">
-            <h1>Shop Electronics</h1>
+            <h1>CRICKET</h1>
             <div class="row">
-                <a href="photography.html">
-                    <div class="imgcontainer">
-                        <img src="images/sonyZ10.png" alt="b">
-                        <h6>Photography</h6>
-                    </div>
-                </a>
-                
-                <a href="mobile.html">
-                    <div class="imgcontainer">
-                        <img src="images/mobileAccessories2.png" alt="b">
-                        <h6>Mobile accessories</h6>
-                    </div>
-                </a>
+                    <a href="canonEOSm50.html">
+                        <div class="imgcontainer">
+                            <img src="images/canonEOSm50.png" alt="canon eos m50">                        
+                            <h6>Canon EOS M50 Mark II</h6>
+                            <h6>$788</h6>
+                        </div>
+                    </a>
+                    
+                    <a href="sonyAlpha7.html">
+                        <div class="imgcontainer">
+                            <img src="images/sonyAlpha7.png" alt="SONY ZV-E10">
+                            <h6>SONY ZV-E10 Mirrorless Camera</h6>
+                            <h6>$699</h6>
+                        </div>
+                    </a>
             </div>
-            <div class="row">
-                <a href="speakers.html">
-                    <div class="imgcontainer">
-                        <img src="images/speakers.png" alt="b">
-                        <h6>Speakers</h6>
-                    </div>
-                </a>
-                
-                <a href="gaming.html">
-                    <div class="imgcontainer">
-                        <img src="images/gaming.png" alt="b">                        
-                        <h6>Gaming</h6>
-                    </div>
-                </a>
-                
-            </div>
-                
         </div>
 
     </div>

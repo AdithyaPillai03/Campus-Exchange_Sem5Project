@@ -25,40 +25,40 @@
                 <a href="products.html"><button type="submit" id="search-btn">Search</button></a>
             </div>
             <div class="nav-btns">
-                <a href="home.html"><button id="BtnSell">Sell</button></a>
-                <a href="cart.html"><button><i class="fa-solid fa-cart-shopping"></i></button></a>
+                <a href="sellerProfile.html"><button id="BtnSell">Sell</button></a>
+                <a href="home.html"><button><i class="fa-solid fa-cart-shopping"></i></button></a>
                 <a href="userProfile.html"><button><i class="fa-solid fa-user"></i></button></a>
             </div>
         </div>
         <div class="Category">
-            <h1>Shop Sports</h1>
+            <h1>Shop Electronics</h1>
             <div class="row">
-                <a href="cricket.html">
+                <a href="photography.html">
                     <div class="imgcontainer">
-                        <img src="images/cricketBat.png" alt="b">
-                        <h6>Cricket</h6>
+                        <img src="images/sonyZ10.png" alt="b">
+                        <h6>Photography</h6>
                     </div>
                 </a>
                 
-                <a href="badminton.html">
+                <a href="mobile.html">
                     <div class="imgcontainer">
-                        <img src="images/badminton2.png" alt="b">
-                        <h6>Badminton</h6>
+                        <img src="images/mobileAccessories2.png" alt="b">
+                        <h6>Mobile accessories</h6>
                     </div>
                 </a>
             </div>
             <div class="row">
-                <a href="cycles.html">
+                <a href="speakers.html">
                     <div class="imgcontainer">
-                        <img src="images/cycling.png" alt="b">
-                        <h6>Cycling</h6>
+                        <img src="images/speakers.png" alt="b">
+                        <h6>Speakers</h6>
                     </div>
                 </a>
                 
-                <a href="gym.html">
+                <a href="gaming.html">
                     <div class="imgcontainer">
-                        <img src="images/homeGym.png" alt="b">
-                        <h6>Gym</h6>
+                        <img src="images/gaming.png" alt="b">                        
+                        <h6>Gaming</h6>
                     </div>
                 </a>
                 

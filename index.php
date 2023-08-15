@@ -21,7 +21,7 @@
                 <a href="products.html"><button type="submit" id="search-btn">Search</button></a>
             </div>
             <div class="nav-btns">
-                <a href="sellerProfile.html"><button id="BtnSell">Sell</button></a>
+                <a href="sellerProfile.php"><button id="BtnSell">Sell</button></a>
                 <a href="home.html"><button><i class="fa-solid fa-cart-shopping"></i></button></a>
                 <a href="userProfile.html"><button><i class="fa-solid fa-user"></i></button></a>
             </div>
@@ -42,7 +42,7 @@
                     <h6>SELL WHAT YOU DON'T</h6>
                 </div>
                 <div class="hero-buttons">
-                    <a href="signup.html"><button id="Join-Cta">Join Now</button></a>
+                    <a href="signup.php"><button id="Join-Cta">Join Now</button></a>
                     <a href="allDeals.html"><button id="Deals-Cta">Discover deals</button></a>
                 </div>
             </div>

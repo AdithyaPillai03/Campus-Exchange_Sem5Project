@@ -25,40 +25,40 @@
                 <a href="products.html"><button type="submit" id="search-btn">Search</button></a>
             </div>
             <div class="nav-btns">
-                <a href="home.html"><button id="BtnSell">Sell</button></a>
-                <a href="cart.html"><button><i class="fa-solid fa-cart-shopping"></i></button></a>
+                <a href="sellerProfile.html"><button id="BtnSell">Sell</button></a>
+                <a href="home.html"><button><i class="fa-solid fa-cart-shopping"></i></button></a>
                 <a href="userProfile.html"><button><i class="fa-solid fa-user"></i></button></a>
             </div>
         </div>
         <div class="Category">
-            <h1>Shop Fashion</h1>
+            <h1>Shop Sports</h1>
             <div class="row">
-                <a href="MensTshirt.html">
+                <a href="cricket.html">
                     <div class="imgcontainer">
-                        <img src="images/mensTshirt.png" alt="b">
-                        <h6>Mens Tshirts</h6>
+                        <img src="images/cricketBat.png" alt="b">
+                        <h6>Cricket</h6>
                     </div>
                 </a>
                 
-                <a href="jeans.html">
+                <a href="badminton.html">
                     <div class="imgcontainer">
-                        <img src="images/mensJeans.png" alt="b">
-                        <h6>Mens Jeans</h6>
+                        <img src="images/badminton2.png" alt="b">
+                        <h6>Badminton</h6>
                     </div>
                 </a>
             </div>
             <div class="row">
-                <a href="sarees.html">
+                <a href="cycles.html">
                     <div class="imgcontainer">
-                        <img src="images/womensSarees.png" alt="b">
-                        <h6>Sarees</h6>
+                        <img src="images/cycling.png" alt="b">
+                        <h6>Cycling</h6>
                     </div>
                 </a>
                 
-                <a href="kurtas.html">
+                <a href="gym.html">
                     <div class="imgcontainer">
-                        <img src="images/mensKurta.png" alt="b">
-                        <h6>Mens kurtas</h6>
+                        <img src="images/homeGym.png" alt="b">
+                        <h6>Gym</h6>
                     </div>
                 </a>
                 

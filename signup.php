@@ -10,19 +10,52 @@
     <link rel="stylesheet" href="signUpStyle.css">
 </head>
 <body>
+<?php
+    if ($_SERVER['REQUEST_METHOD'] == 'POST'){
+        $name = $_POST['name'];
+        $email = $_POST['email'];
+        $rollNo = $_POST['rollNo'];
+        $password = $_POST['password'];
+
+        $servername = "localhost";
+        $username = "root";
+        $password = "";
+        $database = "ecommerce_db";
+
+        // Create a connection
+        $conn = mysqli_connect($servername, $username, $password, $database);
+        // Die if connection was not successful
+        if (!$conn){
+            die("Sorry we failed to connect: ". mysqli_connect_error());
+        }
+        else{ 
+            // Submit these to a database
+            // Sql query to be executed 
+            $sql = "INSERT INTO `user` (`name`, `email`, `password`, `type`) VALUES ('$name', '$email', '$password', 'user')";
+            $result = mysqli_query($conn, $sql);
+
+            if ($result){
+                echo "your name is '$name' , email is '$email' and roll number is '$rollNo'";
+                echo "Your data has been successfully stored in our database";
+            }
+    }
+    header("Location: login.html", true, 303);
+    exit();
+}
+?>
     <div class="heading">
         <a href="index.html"><h1>Campus Exchange</h1></a>
         <h4>Join the Student Community: Connect, Earn, and Thrive!</h4>
     </div>
         <div class="signUpForm">
-            <form action="">
+            <form action="/sem5 Project New/new Resources/signup.php" method="post">
                 <div class="formGrp">
                     <label for="name">Enter Name:</label>
-                    <input type="text" id="name" required>
+                    <input type="text" name="name" class="name" id="name" required>
                 </div>
                 <div class="formGrp">
                     <label for="email">Enter College Email:</label>
-                    <input type="email" id="email" required> 
+                    <input type="email" name="email" class="email" id="email" required> 
                 </div>
                 <div class="formGrp">
                     <label for="classSelect">Select class:</label>
@@ -36,11 +69,11 @@
                 </div>
                 <div class="formGrp">
                     <label for="rollNo">Enter Roll No.:</label>
-                    <input type="text" id="rollNo" required>
+                    <input type="text" name="rollNo" class="rollNo" id="rollNo" required>
                 </div>
                 <div class="formGrp">
                     <label for="password">Enter Password: (6 or more charachters)</label>
-                    <input type="password" id="password" required>
+                    <input type="password" name="password" class="password" id="password" required>
                 </div>
                 <p>By clicking on join now, you accept Campus Exchange’s <span>user agreement,privacy policy and cookie policy</span></p>
                 <button type="submit">JOIN NOW</button>
@@ -51,3 +84,4 @@
     
 </body>
 </html>
+

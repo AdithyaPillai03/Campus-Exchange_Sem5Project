@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Campus Exchange | Cricket</title>
+    <title>Campus Exchange</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,6 +13,7 @@
 <body>
 
     <div class="ellipse-1"></div>
+    <div class="ellipse-2"></div>
     
     <div class="mainContainer">
         <div class="header">
@@ -24,32 +25,44 @@
                 <a href="products.html"><button type="submit" id="search-btn">Search</button></a>
             </div>
             <div class="nav-btns">
-                <a href="home.html"><button id="BtnSell">Sell</button></a>
-                <a href="cart.html"><button><i class="fa-solid fa-cart-shopping"></i></button></a>
+                <a href="sellerProfile.html"><button id="BtnSell">Sell</button></a>
+                <a href="home.html"><button><i class="fa-solid fa-cart-shopping"></i></button></a>
                 <a href="userProfile.html"><button><i class="fa-solid fa-user"></i></button></a>
             </div>
         </div>
         <div class="Category">
-            <h1>CRICKET</h1>
+            <h1>Shop Books</h1>
             <div class="row">
-                    <a href="canonEOSm50.html">
+                    <a href="entranceBook.html">
                         <div class="imgcontainer">
-                            <img src="images/canonEOSm50.png" alt="canon eos m50">                        
-                            <h6>Canon EOS M50 Mark II</h6>
-                            <h6>$788</h6>
+                            <img src="images/entranceBooks.png" alt="entrance books">                        
+                            <h6>Entrance</h6>
                         </div>
                     </a>
                     
-                    <a href="sonyAlpha7.html">
+                    <a href="comicBook.html">
                         <div class="imgcontainer">
-                            <img src="images/sonyAlpha7.png" alt="SONY ZV-E10">
-                            <h6>SONY ZV-E10 Mirrorless Camera</h6>
-                            <h6>$699</h6>
+                            <img src="images/kidsBooks.png" alt="comic books">
+                            <h6>Comics</h6>
+                        </div>
+                    </a>
+            </div>
+            <div class="row">
+                    <a href="selfHelpBook.html">
+                        <div class="imgcontainer">
+                            <img src="images/books.png" alt="selfhelp book">                        
+                            <h6>Self-Help</h6>
+                        </div>
+                    </a>
+                    
+                    <a href="fantasyBook.html">
+                        <div class="imgcontainer">
+                            <img src="images/fantasyBooks.png" alt="fantasy book">
+                            <h6>Fantasy</h6>
                         </div>
                     </a>
             </div>
         </div>
-
     </div>
 </body>
 </html>

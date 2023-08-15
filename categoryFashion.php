@@ -14,7 +14,7 @@
 
     <div class="ellipse-1"></div>
     <div class="ellipse-2"></div>
-    
+
     <div class="mainContainer">
         <div class="header">
             <a href="index.html">
@@ -25,44 +25,47 @@
                 <a href="products.html"><button type="submit" id="search-btn">Search</button></a>
             </div>
             <div class="nav-btns">
-                <a href="home.html"><button id="BtnSell">Sell</button></a>
-                <a href="cart.html"><button><i class="fa-solid fa-cart-shopping"></i></button></a>
+                <a href="sellerProfile.html"><button id="BtnSell">Sell</button></a>
+                <a href="home.html"><button><i class="fa-solid fa-cart-shopping"></i></button></a>
                 <a href="userProfile.html"><button><i class="fa-solid fa-user"></i></button></a>
             </div>
         </div>
         <div class="Category">
-            <h1>Shop Books</h1>
+            <h1>Shop Fashion</h1>
             <div class="row">
-                    <a href="entranceBook.html">
-                        <div class="imgcontainer">
-                            <img src="images/entranceBooks.png" alt="entrance books">                        
-                            <h6>Entrance</h6>
-                        </div>
-                    </a>
-                    
-                    <a href="comicBook.html">
-                        <div class="imgcontainer">
-                            <img src="images/kidsBooks.png" alt="comic books">
-                            <h6>Comics</h6>
-                        </div>
-                    </a>
+                <a href="MensTshirt.html">
+                    <div class="imgcontainer">
+                        <img src="images/mensTshirt.png" alt="b">
+                        <h6>Mens Tshirts</h6>
+                    </div>
+                </a>
+                
+                <a href="jeans.html">
+                    <div class="imgcontainer">
+                        <img src="images/mensJeans.png" alt="b">
+                        <h6>Mens Jeans</h6>
+                    </div>
+                </a>
             </div>
             <div class="row">
-                    <a href="selfHelpBook.html">
-                        <div class="imgcontainer">
-                            <img src="images/books.png" alt="selfhelp book">                        
-                            <h6>Self-Help</h6>
-                        </div>
-                    </a>
-                    
-                    <a href="fantasyBook.html">
-                        <div class="imgcontainer">
-                            <img src="images/fantasyBooks.png" alt="fantasy book">
-                            <h6>Fantasy</h6>
-                        </div>
-                    </a>
+                <a href="sarees.html">
+                    <div class="imgcontainer">
+                        <img src="images/womensSarees.png" alt="b">
+                        <h6>Sarees</h6>
+                    </div>
+                </a>
+                
+                <a href="kurtas.html">
+                    <div class="imgcontainer">
+                        <img src="images/mensKurta.png" alt="b">
+                        <h6>Mens kurtas</h6>
+                    </div>
+                </a>
+                
             </div>
+                
         </div>
+
     </div>
 </body>
 </html>
