@@ -12,39 +12,44 @@
 <body>
 <?php
     if ($_SERVER['REQUEST_METHOD'] == 'POST'){
+        include '_connection.php';
         $name = $_POST['name'];
         $email = $_POST['email'];
-        $password = $_POST['password'];
         $class = $_POST['classSelect'];
+        $password = $_POST['password'];
+        $cpassword = $_POST['cPassword'];
 
-        $servername = "localhost";
-        $username = "root";
-        $password = "";
-        $database = "ecommerce_db";
+        $sql = "SELECT * FROM `user` where email = '$email'";
+        $result = mysqli_query($conn, $sql);
+        $emailCount = mysqli_num_rows($result);
 
-        // Create a connection
-        $conn = mysqli_connect($servername, $username, $password, $database);
-        // Die if connection was not successful
-        if (!$conn){
-            die("Sorry we failed to connect: ". mysqli_connect_error());
-        }
-        else{ 
-            // Submit these to a database
-            // Sql query to be executed 
-            $sql = "INSERT INTO `user` (`name`, `email`, `password`, `type`, `class`) VALUES ('$name', '$email', '$password', 'user', '$class')";
-            $result = mysqli_query($conn, $sql);
+        if ($emailCount == 0){
+            if ($password == $cpassword){
+                $sql = "INSERT INTO `user` (`name`, `email`, `password`, `type`, `class`) VALUES ('$name', '$email', '$password', 'user' , '$class')";
+                $result = mysqli_query($conn, $sql);
 
-            if ($result){
-                echo "your name is '$name' , email is '$email' .";
-                echo "Your data has been successfully stored in our database";
+                if ($result){
+                    echo "your name is '$name' , email is '$email' and roll number is '$rollNo'";
+                    echo "Your data has been successfully stored in our database"; 
+                    header("Location: login.php", true, 303);
+                    exit();
+                }
             }
-    }
-    header("Location: login.php", true, 303);
-    exit();
+        }
+        else{
+            if ($emailCount > 0){
+            echo '<script>
+            window.location.href = "login.php";
+            alert("Email already exists!! Try remembering password and Log in");
+            </script>';
+            }
+        }
+
 }
 ?>
     <div class="heading">
         <a href="index.php"><h1>Campus Exchange</h1></a>
+        <p>Tip: Whenever you want to access the home page, just click on our LOGO</p>
         <h4>Join the Student Community: Connect, Earn, and Thrive!</h4>
     </div>
         <div class="signUpForm">
@@ -70,6 +75,10 @@
                 <div class="formGrp">
                     <label for="password">Enter Password: (6 or more charachters)</label>
                     <input type="password" name="password" class="password" id="password" required>
+                </div>
+                <div class="formGrp">
+                    <label for="cPassword">Confirm Password:</label>
+                    <input type="password" name="cPassword" class="cPassword" id="cPassword" required>
                 </div>
                 <p>By clicking on join now, you accept Campus Exchange’s <span>user agreement,privacy policy and cookie policy</span></p>
                 <button type="submit" id="signUpBtn">JOIN NOW</button>

@@ -27,8 +27,8 @@
 
         if ($emailCount == 0){
             if ($password == $cpassword){
-                $hash = password_hash($cpassword, PASSWORD_DEFAULT);
-                $sql = "INSERT INTO `user` (`name`, `email`, `password`, `type`, `class`) VALUES ('$name', '$email', '$hash', 'seller' , '$class')";
+                // $hash = password_hash($cpassword, PASSWORD_DEFAULT);
+                $sql = "INSERT INTO `user` (`name`, `email`, `password`, `type`, `class`) VALUES ('$name', '$email', '$password', 'seller' , '$class')";
                 $result = mysqli_query($conn, $sql);
 
                 if ($result){
@@ -63,10 +63,11 @@
 
     <div class="heading">
         <a href="index.php"><h1>Campus Exchange</h1></a>
+        <p>Tip: Whenever you want to access the home page, just click on our LOGO</p>
         <h4>Join the Student Community: Connect, Earn, and Thrive!</h4>
     </div>
         <div class="signUpForm">
-            <form action="/sem5 Project New/new Resources/signup.php" method="post">
+            <form action="/sem5 Project New/new Resources/sellerSignup.php" method="post">
                 <div class="formGrp">
                     <label for="name">Enter Name:</label>
                     <input type="text" name="name" class="name" id="name" required>
@@ -77,17 +78,13 @@
                 </div>
                 <div class="formGrp">
                     <label for="classSelect">Select class:</label>
-                    <select id="classSelect">
+                    <select id="classSelect" name="classSelect">
                         <option value="fycs">F.Y.Bsc CS</option>
                         <option value="fybcom">F.Y.BCOM</option>
                         <option value="fyit">F.Y.Bsc IT</option>
                         <option value="fybba">F.Y.B.B.A</option>
                         <option value="fybaf">F.Y.B.A.F</option>
                       </select>
-                </div>
-                <div class="formGrp">
-                    <label for="rollNo">Enter Roll No.:</label>
-                    <input type="text" name="rollNo" class="rollNo" id="rollNo" required>
                 </div>
                 <div class="formGrp">
                     <label for="password">Enter Password: (6 or more charachters)</label>

@@ -10,16 +10,53 @@
     <link rel="stylesheet" href="loginStyle.css">
 </head>
 <body>
+<?php
+    if ($_SERVER['REQUEST_METHOD'] == 'POST'){
+        include '_connection.php';
+        $email = $_POST['email'];
+        $password = $_POST['password'];
+
+        $sql = "SELECT `password` FROM `user` where email = '$email'";
+        $result = mysqli_query($conn, $sql);
+        $resultCount = mysqli_num_rows($result);
+
+        if ($resultCount > 0 ){
+                $row = $result->fetch_assoc();
+                if ($password == $row['password']){
+                    header("Location: index.php", true, 303);
+                    exit();
+                }
+                else{
+                    echo '<script>
+                    window.location.href = "login.php";
+                    alert("Invalid Password!!");
+                    </script>';
+                }
+                // echo $row['password']."<br>";
+            // echo "$result";
+            // echo "your name is '$name' , email is '$email' and roll number is '$rollNo'";
+            // echo "Your data has been successfully stored in our database"; 
+            
+        }
+        else{
+            echo '<script>
+            window.location.href = "login.php";
+            alert("Invalid Email or Password!!");
+            </script>';
+        }
+}
+?>
+
     <div class="heading">
         <a href="index.php"><h1>Campus Exchange</h1></a>
         <h4>Join the Student Community: Connect, Earn, and Thrive!</h4>
     </div>
     <div class="signUpForm">
-        <form action="">
-              <label for="rollNo">Enter Roll No.:</label>
-              <input type="text" id="rollNo" required>
-              <label for="password">Enter Password: (6 or more charachters)</label>
-              <input type="password" id="password" required>
+        <form action="/sem5 Project New/new Resources/login.php" method="post">
+              <label for="email">Enter E-mail:</label>
+              <input type="email" id="email" name="email" required>
+              <label for="password">Enter Password: </label>
+              <input type="password" id="password" name="password" required>
             <button type="submit">LOGIN</button>
             <h6>Don't have an Account? <a href="signup.php">Join Now</a></h6>
         </form>
