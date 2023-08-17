@@ -14,37 +14,43 @@
 
 <?php
     if ($_SERVER['REQUEST_METHOD'] == 'POST'){
+        include '_connection.php';
         $name = $_POST['name'];
         $email = $_POST['email'];
-        $rollNo = $_POST['rollNo'];
+        $class = $_POST['classSelect'];
         $password = $_POST['password'];
+        $cpassword = $_POST['cPassword'];
 
-        $servername = "localhost";
-        $username = "root";
-        $password = "";
-        $database = "ecommerce_db";
+        $sql = "SELECT * FROM `user` where email = '$email'";
+        $result = mysqli_query($conn, $sql);
+        $emailCount = mysqli_num_rows($result);
 
-        // Create a connection
-        $conn = mysqli_connect($servername, $username, $password, $database);
-        // Die if connection was not successful
-        if (!$conn){
-            die("Sorry we failed to connect: ". mysqli_connect_error());
-        }
-        else{ 
-            // Submit these to a database
-            // Sql query to be executed 
-            $sql = "INSERT INTO `user` (`name`, `email`, `password`, `type`) VALUES ('$name', '$email', '$password', 'seller')";
-            $result = mysqli_query($conn, $sql);
+        if ($emailCount == 0){
+            if ($password == $cpassword){
+                $hash = password_hash($cpassword, PASSWORD_DEFAULT);
+                $sql = "INSERT INTO `user` (`name`, `email`, `password`, `type`, `class`) VALUES ('$name', '$email', '$hash', 'seller' , '$class')";
+                $result = mysqli_query($conn, $sql);
 
-            if ($result){
-                echo "your name is '$name' , email is '$email' and roll number is '$rollNo'";
-                echo "Your data has been successfully stored in our database";
+                if ($result){
+                    echo "your name is '$name' , email is '$email' and roll number is '$rollNo'";
+                    echo "Your data has been successfully stored in our database"; 
+                    header("Location: login.php", true, 303);
+                    exit();
+                }
             }
-    }
-    header("Location: login.php", true, 303);
-    exit();
+        }
+        else{
+            if ($emailCount > 0){
+            echo '<script>
+            window.location.href = "login.php";
+            alert("Email already exists!! Try remembering password and Log in");
+            </script>';
+            }
+        }
+
 }
 ?>
+
     <div id="hiddenDiv" style='display:none;background-color:red;color:white'>
         <span class="alert-message">This is an error message.</span>
     </div>
