@@ -26,7 +26,12 @@
                 <a href="userProfile.php"><button><i class="fa-solid fa-user"></i></button></a>
             </div>
         </div>
-
+        <?php
+            session_start();
+            if (isset($_SESSION['user'])) {
+                echo "<p>Hello {$_SESSION['user']}</p>";
+            }
+        ?>
         <div class="hero">
             <div class="hero-content">
                 <div class="hero-heads">

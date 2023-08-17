@@ -11,18 +11,20 @@
 </head>
 <body>
 <?php
+    session_start();
     if ($_SERVER['REQUEST_METHOD'] == 'POST'){
         include '_connection.php';
         $email = $_POST['email'];
         $password = $_POST['password'];
 
-        $sql = "SELECT `password` FROM `user` where email = '$email'";
+        $sql = "SELECT * FROM `user` where email = '$email'";
         $result = mysqli_query($conn, $sql);
         $resultCount = mysqli_num_rows($result);
 
         if ($resultCount > 0 ){
                 $row = $result->fetch_assoc();
                 if ($password == $row['password']){
+                    $_SESSION['user'] = $row["name"];
                     header("Location: index.php", true, 303);
                     exit();
                 }
