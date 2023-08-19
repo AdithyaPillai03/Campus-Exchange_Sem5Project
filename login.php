@@ -22,7 +22,7 @@
         $resultCount = mysqli_num_rows($result);
 
         if ($resultCount > 0 ){
-                $row = $result->fetch_assoc();
+                $row = mysqli_fetch_assoc($result);
                 if ($password == $row['password']){
                     $_SESSION['user'] = $row["name"];
                     header("Location: index.php", true, 303);

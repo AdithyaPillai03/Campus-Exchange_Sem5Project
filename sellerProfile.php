@@ -45,30 +45,33 @@
         </div>
 
         <div class="addItem" id="addItem" style="display: none;">
-            <form action="" onsubmit="">
+            <form action="/sem5 Project New/new Resources/imgUpload.php" method="post" enctype="multipart/form-data">
                 <label for="category">Select Category:</label>
-                <input type="text" id ="category" required>
+                <input type="text" name="category" id ="category" required>
                 <br>
                 <label for="prodName">Enter name of product:</label>
-                <input type="text" id ="prodName" required>
+                <input type="text" name="prodName" id ="prodName" required>
                 <br>
                 <label for="prodDesc">Enter description of product:</label>
-                <textarea name="text" id="prodDesc" cols="50" rows="8"></textarea>
+                <textarea name="prodDesc" id="prodDesc" cols="50" rows="8"></textarea>
                 <br>
                 <label for="prodPrice">Enter price of product:</label>
-                <input type="number" id ="prodPrice" required>
+                <input type="number" name="prodPrice" id ="prodPrice" required>
                 <br>
                 <label for="keywords">Select Keywords:</label>
-                <input type="text" id ="keywords" required>
+                <input type="text" name="keywords" id ="keywords" required>
                 <br>
-                <button type="reset" id="passChangeActionBtn">ADD</button>
+                <label for="img_upload">Insert Image:</label>
+                <input type="file" name="img_upload" id ="img_upload" required>
+                <br>
+                <button type="submit" name="addItemBtn" id="passChangeActionBtn">ADD</button>
             </form>
         </div>
         <div class="delItem" id="delItem" style="display: none;">
             <form action="" onsubmit="">
                 <label for="prodSelect">Select Item:</label>
                 <input type="text" id ="prodSelect" required>
-                <button type="reset" id="delItemActionBtn">CONFIRM DELETE</button>
+                <button type="submit" id="delItemActionBtn">CONFIRM DELETE</button>
             </form>
         </div>
         <div class="updateItem" id="updateItem" style="display: none;">
@@ -88,7 +91,7 @@
                 <label for="updKeywords">Select Keywords:</label>
                 <input type="text" id ="updKeywords" required>
                 <br>
-                <button type="reset" id="passChangeActionBtn">CONFIRM UPDATE</button>
+                <button type="submit" id="passChangeActionBtn">CONFIRM UPDATE</button>
             </form>
         </div>
     </div>
