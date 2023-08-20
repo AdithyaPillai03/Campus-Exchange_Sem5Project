@@ -29,7 +29,7 @@
         <?php
             session_start();
             if (isset($_SESSION['user'])) {
-                echo "<p>Hello {$_SESSION['user']}</p>";
+                echo "<h1 class='welcomeMsg'>Hello {$_SESSION['user']}</h1>";
             }
         ?>
         <div class="hero">

@@ -25,6 +25,7 @@
                 $row = mysqli_fetch_assoc($result);
                 if ($password == $row['password']){
                     $_SESSION['user'] = $row["name"];
+                    $_SESSION['userType'] = $row["type"];
                     header("Location: index.php", true, 303);
                     exit();
                 }

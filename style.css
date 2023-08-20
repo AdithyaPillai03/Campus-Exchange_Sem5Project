@@ -29,7 +29,7 @@ a{
 }
 
 .header h1{
-    width: 150.57px;
+    width: 7.8vw;
     font-weight: 900;
     color: #0E457B; 
     font-family: 'Playfair Display', serif;
@@ -123,6 +123,12 @@ a{
     color: #0E457B; 
 }
 
+.welcomeMsg{
+    font-weight: 900;
+    color: #0E457B; 
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+}
 
 /* Hero Section */
 

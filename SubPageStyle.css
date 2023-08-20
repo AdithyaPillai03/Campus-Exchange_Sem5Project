@@ -26,8 +26,8 @@ html,body{
     position: absolute;
     background-color: #FFCB12;
     z-index: -1;
-    width: 1200px;
-    height: 700px;
+    width: 60vw;
+    height: 70vh;
     top: 20%;
     left: -15%;
     border-radius: 50%;
@@ -38,8 +38,8 @@ html,body{
     position: absolute;
     background-color: rgb(255, 203, 18);
     z-index: -1;
-    width: 1200px;
-    height: 600px;
+    width: 60vw;
+    height: 70vh;
     top: 130vh;
     right: -24vw;
     border-radius: 50%;
