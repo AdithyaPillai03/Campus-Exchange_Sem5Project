@@ -87,6 +87,9 @@ else{
                 <label for="keywords">Select Keywords:</label>
                 <input type="text" name="keywords" id ="keywords" required>
                 <br>
+                <label for="type">Enter type:</label>
+                <input type="text" name="type" id ="type" required>
+                <br>
                 <label for="img_upload">Insert Image:</label>
                 <input type="file" name="img_upload" id ="img_upload" required>
                 <br>

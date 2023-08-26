@@ -31,8 +31,32 @@
         </div>
         <div class="Category">
             <h1>PHOTOGRAPHY</h1>
-            <div class="row">
-                    <a href="canonEOSm50.php">
+            <div class="row" id="row">
+            <?php
+                include '_connection.php';
+                $sql = "SELECT * FROM `products` where `category`='electronics'";
+                $result = mysqli_query($conn, $sql);
+
+                // $products = array();
+
+                    while ($row = mysqli_fetch_assoc($result)) {
+                        $img = $row["img_loc"];
+                        $price = $row["price"];
+                        $title = $row["title"];
+                        $type = $row["type"];
+                        // echo "image is.$img";
+                        echo "
+                            <a href='canonEOSm50.php'>
+                                <div class='imgcontainer'>
+                                    <img src='userUploads/$img' alt='$type'>                        
+                                    <h6>$price</h6>
+                                    <h6>$title</h6>
+                                </div>
+                            </a>";
+                    }
+                $conn->close();
+            ?>
+                    <!-- <a href="canonEOSm50.php">
                         <div class="imgcontainer">
                             <img src="images/canonEOSm50.png" alt="canon eos m50">                        
                             <h6>Canon EOS M50 Mark II</h6>
@@ -46,10 +70,36 @@
                             <h6>SONY ZV-E10 Mirrorless Camera</h6>
                             <h6>$699</h6>
                         </div>
-                    </a>
+                    </a> -->
             </div>
         </div>
 
     </div>
+
+    <!-- <script>
+        document.addEventListener("DOMContentLoaded", function () {
+        fetch("get_products.php")
+            .then(response => response.json())
+            .then(products => {
+                const productList = document.getElementById("row");
+                products.forEach(product => {
+                    const productLink = document.createElement("a");
+                    productLink.href = `#`;
+                    
+                    const productDiv = document.createElement("div");
+                    productDiv.className = "imgcontainer";
+                    productDiv.innerHTML = `
+                        <img src="${product.img}" alt="${product.title}">
+                        <h6>${product.title}</h6>
+                        <h6>${product.price}</h6>
+                    `;
+                    productLink.appendChild(productDiv);
+                    productList.appendChild(productLink);
+                });
+            })
+                .catch(error => console.error("Error fetching products:", error));
+        });
+
+    </script> -->
 </body>
 </html>

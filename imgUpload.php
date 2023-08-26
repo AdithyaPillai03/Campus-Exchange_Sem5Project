@@ -8,8 +8,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
     $img = $_FILES['img_upload']['name'];
     $category = $_POST['category'];
     $keyword = $_POST['keywords'];
+    $type = $_POST['type'];
     
-    $sql = "INSERT INTO `products` (`seller_id`, `title`, `description`, `price`, `img_loc`, `category`,`keyword`) VALUES (2, '$title', '$desc', '$price', '$img' , '$category', '$keyword')";
+    $sql = "INSERT INTO `products` (`seller_id`, `title`, `description`, `price`, `img_loc`, `category`,`type`,`keyword`) VALUES (2, '$title', '$desc', '$price', '$img' , '$category', '$type', '$keyword')";
     $result = mysqli_query($conn, $sql);
 
     if ($result){
@@ -17,6 +18,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
         echo '<script>
         // window.location.href = "login.php";
         alert("File uploaded");
+        window.location.href = "sellerSignup.php";
         </script>';
     }
     else{
