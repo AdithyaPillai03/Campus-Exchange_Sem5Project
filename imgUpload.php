@@ -18,7 +18,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
         echo '<script>
         // window.location.href = "login.php";
         alert("File uploaded");
-        window.location.href = "sellerSignup.php";
+        //window.location.href = "sellerSignup.php";
         </script>';
     }
     else{

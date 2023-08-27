@@ -37,8 +37,6 @@
                 $sql = "SELECT * FROM `products` where `category`='electronics'";
                 $result = mysqli_query($conn, $sql);
 
-                // $products = array();
-
                     while ($row = mysqli_fetch_assoc($result)) {
                         $img = $row["img_loc"];
                         $price = $row["price"];
@@ -49,7 +47,7 @@
                             <a href='canonEOSm50.php'>
                                 <div class='imgcontainer'>
                                     <img src='userUploads/$img' alt='$type'>                        
-                                    <h6>$price</h6>
+                                    <h6>₹$price</h6>
                                     <h6>$title</h6>
                                 </div>
                             </a>";

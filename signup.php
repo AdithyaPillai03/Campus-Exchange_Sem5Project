@@ -83,7 +83,7 @@
                 <p>By clicking on join now, you accept Campus Exchange’s <span>user agreement,privacy policy and cookie policy</span></p>
                 <button type="submit" id="signUpBtn">JOIN NOW</button>
                 <h6>Have an Account? <a href="login.php">Sign In</a></h6>
-                <h6>Wanna create a seller Account? <a href="sellerSignup.php">Seller Sign In</a></h6>
+                <h2>Wanna create a seller Account? <a href="sellerSignup.php">Seller Sign In</a></h2>
             </form>
         </div>
     </div>
