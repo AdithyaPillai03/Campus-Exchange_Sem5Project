@@ -20,8 +20,10 @@
                 <h1>Campus Exchange</h1>
             </a>
             <div class="search-bar">
-                <input type="search" id="search-input" placeholder="Search for Products.. ">
-                <a href="products.php"><button type="submit" id="search-btn">Search</button></a>
+                <form action="search.php" method="post">
+                    <input type="search" name = "search-input" id="" placeholder="Search for Products.. ">
+                    <button type="submit" id="search-btn">Search</button>
+                </form>
             </div>
             <div class="nav-btns">
                 <a href="sellerProfile.php"><button id="BtnSell">Sell</button></a>

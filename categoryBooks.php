@@ -21,8 +21,10 @@
                 <h1>Campus Exchange</h1>
             </a>
             <div class="search-bar">
-                <input type="search" id="search-input" placeholder="Search for Products.. ">
-                <a href="products.php"><button type="submit" id="search-btn">Search</button></a>
+                <form action="search.php" method="post">
+                    <input type="search" name = "search-input" id="" placeholder="Search for Products.. ">
+                    <button type="submit" id="search-btn">Search</button>
+                </form>
             </div>
             <div class="nav-btns">
                 <a href="sellerProfile.php"><button id="BtnSell">Sell</button></a>
@@ -33,14 +35,14 @@
         <div class="Category">
             <h1>Shop Books</h1>
             <div class="row">
-                    <a href="entranceBook.php">
+                    <a href="individualCategoryItems.php?key=entrance">
                         <div class="imgcontainer">
                             <img src="images/entranceBooks.png" alt="entrance books">                        
                             <h6>Entrance</h6>
                         </div>
                     </a>
                     
-                    <a href="comicBook.php">
+                    <a href="individualCategoryItems.php?key=comics">
                         <div class="imgcontainer">
                             <img src="images/kidsBooks.png" alt="comic books">
                             <h6>Comics</h6>
@@ -48,14 +50,14 @@
                     </a>
             </div>
             <div class="row">
-                    <a href="selfHelpBook.php">
+                    <a href="individualCategoryItems.php?key=self-help">
                         <div class="imgcontainer">
                             <img src="images/books.png" alt="selfhelp book">                        
                             <h6>Self-Help</h6>
                         </div>
                     </a>
                     
-                    <a href="fantasyBook.php">
+                    <a href="individualCategoryItems.php?key=fantasy">
                         <div class="imgcontainer">
                             <img src="images/fantasyBooks.png" alt="fantasy book">
                             <h6>Fantasy</h6>

@@ -21,8 +21,10 @@
                 <h1>Campus Exchange</h1>
             </a>
             <div class="search-bar">
-                <input type="search" id="search-input" placeholder="Search for Products.. ">
-                <a href="products.php"><button type="submit" id="search-btn">Search</button></a>
+                <form action="search.php" method="post">
+                    <input type="search" name = "search-input" id="" placeholder="Search for Products.. ">
+                    <button type="submit" id="search-btn">Search</button>
+                </form>
             </div>
             <div class="nav-btns">
                 <a href="sellerProfile.php"><button id="BtnSell">Sell</button></a>
@@ -35,28 +37,28 @@
             <div class="ElectronicsCategory">
                 <h1>Best of Electronics</h1>
                 <div class="images">
-                    <a href="photography.php">
+                    <a href="individualCategoryItems.php?key=photography">
                         <div class="imgcontainer">
                             <img src="images/sonyZ10.png" alt="b">
                             <h6>Photography</h6>
                         </div>
                     </a>
                     
-                    <a href="mobile.php">
+                    <a href="individualCategoryItems.php?key=mobile">
                         <div class="imgcontainer">
                             <img src="images/mobileAccessories2.png" alt="b">
                             <h6>Mobile accessories</h6>
                         </div>
                     </a>
                     
-                    <a href="speakers.php">
+                    <a href="individualCategoryItems.php?key=speakers">
                         <div class="imgcontainer">
                             <img src="images/speakers.png" alt="b">
                             <h6>Speakers</h6>
                         </div>
                     </a>
                     
-                    <a href="gaming.php">
+                    <a href="individualCategoryItems.php?key=gaming">
                         <div class="imgcontainer">
                             <img src="images/gaming.png" alt="b">                        
                             <h6>Gaming</h6>
@@ -69,28 +71,28 @@
             <div class="BooksCategory">
                 <h1>Best of Books</h1>
                 <div class="images">
-                    <a href="entranceBook.php">
+                    <a href="individualCategoryItems.php?key=entrance">
                         <div class="imgcontainer">
                             <img src="images/entranceBooks.png" alt="b">                        
                             <h6>Entrance</h6>
                         </div>
                     </a>
                     
-                    <a href="comicBook.php">
+                    <a href="individualCategoryItems.php?key=comics">
                         <div class="imgcontainer">
                             <img src="images/kidsBooks.png" alt="b">
                             <h6>Comics</h6>
                         </div>
                     </a>
                     
-                    <a href="selfHelpBook.php">
+                    <a href="individualCategoryItems.php?key=self-help">
                         <div class="imgcontainer">
                             <img src="images/books.png" alt="b">                        
                             <h6>Self-Help</h6>
                         </div>
                     </a>
                     
-                    <a href="fantasyBook.php">
+                    <a href="individualCategoryItems.php?key=fantasy">
                         <div class="imgcontainer">
                             <img src="images/fantasyBooks.png" alt="b">
                             <h6>Fantasy</h6>
@@ -103,28 +105,28 @@
             <div class="FashionCategory">
                 <h1>Best of Fashion</h1>
                 <div class="images">
-                    <a href="MensTshirt.php">
+                    <a href="individualCategoryItems.php?key=mens-tshirt">
                         <div class="imgcontainer">
                             <img src="images/mensTshirt.png" alt="b">
                             <h6>Mens Tshirts</h6>
                         </div>
                     </a>
                     
-                    <a href="jeans.php">
+                    <a href="individualCategoryItems.php?key=jeans">
                         <div class="imgcontainer">
                             <img src="images/mensJeans.png" alt="b">
                             <h6>Mens Jeans</h6>
                         </div>
                     </a>
                     
-                    <a href="sarees.php">
+                    <a href="individualCategoryItems.php?key=sarees">
                         <div class="imgcontainer">
                             <img src="images/womensSarees.png" alt="b">
                             <h6>Sarees</h6>
                         </div>
                     </a>
                     
-                    <a href="kurtas.php">
+                    <a href="individualCategoryItems.php?key=kurtas">
                         <div class="imgcontainer">
                             <img src="images/mensKurta.png" alt="b">
                             <h6>Mens kurtas</h6>
@@ -137,28 +139,28 @@
             <div class="SportsCategory">
                 <h1>Best of Sports</h1>
                 <div class="images">
-                    <a href="cricket.php">
+                    <a href="individualCategoryItems.php?key=cricket">
                         <div class="imgcontainer">
                             <img src="images/cricketBat.png" alt="b">
                             <h6>Cricket</h6>
                         </div>
                     </a>
                     
-                    <a href="badminton.php">
+                    <a href="individualCategoryItems.php?key=badminton">
                         <div class="imgcontainer">
                             <img src="images/badminton2.png" alt="b">
                             <h6>Badminton</h6>
                         </div>
                     </a>
                     
-                    <a href="cycles.php">
+                    <a href="individualCategoryItems.php?key=cycling">
                         <div class="imgcontainer">
                             <img src="images/cycling.png" alt="b">
                             <h6>Cycling</h6>
                         </div>
                     </a>
                     
-                    <a href="gym.php">
+                    <a href="individualCategoryItems.php?key=gym">
                         <div class="imgcontainer">
                             <img src="images/homeGym.png" alt="b">
                             <h6>Gym</h6>

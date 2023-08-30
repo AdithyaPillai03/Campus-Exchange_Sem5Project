@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Campus Exchange | Cricket</title>
+    <title>Campus Exchange | category</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,7 +13,6 @@
 <body>
 
     <div class="ellipse-1"></div>
-    
     <div class="mainContainer">
         <div class="header">
             <a href="index.php">
@@ -27,16 +26,26 @@
             </div>
             <div class="nav-btns">
                 <a href="sellerProfile.php"><button id="BtnSell">Sell</button></a>
-                <a href="home.php"><button><i class="fa-solid fa-cart-shopping"></i></button></a>
+                <a href="cart.php"><button><i class="fa-solid fa-cart-shopping"></i></button></a>
                 <a href="userProfile.php"><button><i class="fa-solid fa-user"></i></button></a>
             </div>
         </div>
+        <?php
+            if (isset($_GET['key'])) {
+                $key = $_GET['key'];
+                // echo $key;
+            }
+        ?>
         <div class="Category">
-            <h1>CRICKET</h1>
+            <h1><?php  echo  ucfirst($key);?> </h1>
             <div class="row">
                 <?php
+                    if (isset($_GET['key'])) {
+                        $key = $_GET['key'];
+                        // echo $key;
+                    }
                     include '_connection.php';
-                    $sql = "SELECT * FROM `products` where `category`='sports'";
+                    $sql = "SELECT * FROM `products` where `category`='$key'";
                     $result = mysqli_query($conn, $sql);
                     $resultCount = mysqli_num_rows($result);
                     if ($resultCount > 0)
@@ -62,21 +71,6 @@
                     }
                     $conn->close();
                 ?>
-                    <!-- <a href="canonEOSm50.php">
-                        <div class="imgcontainer">
-                            <img src="images/canonEOSm50.png" alt="canon eos m50">                        
-                            <h6>Canon EOS M50 Mark II</h6>
-                            <h6>$788</h6>
-                        </div>
-                    </a>
-                    
-                    <a href="sonyAlpha7.php">
-                        <div class="imgcontainer">
-                            <img src="images/sonyAlpha7.png" alt="SONY ZV-E10">
-                            <h6>SONY ZV-E10 Mirrorless Camera</h6>
-                            <h6>$699</h6>
-                        </div>
-                    </a> -->
             </div>
         </div>
 

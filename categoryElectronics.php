@@ -21,8 +21,10 @@
                 <h1>Campus Exchange</h1>
             </a>
             <div class="search-bar">
-                <input type="search" id="search-input" placeholder="Search for Products.. ">
-                <a href="products.php"><button type="submit" id="search-btn">Search</button></a>
+                <form action="search.php" method="post">
+                    <input type="search" name = "search-input" id="" placeholder="Search for Products.. ">
+                    <button type="submit" id="search-btn">Search</button>
+                </form>
             </div>
             <div class="nav-btns">
                 <a href="sellerProfile.php"><button id="BtnSell">Sell</button></a>
@@ -33,14 +35,14 @@
         <div class="Category">
             <h1>Shop Electronics</h1>
             <div class="row">
-                <a href="photography.php">
+                <a href="individualCategoryItems.php?key=photography">
                     <div class="imgcontainer">
                         <img src="images/sonyZ10.png" alt="b">
                         <h6>Photography</h6>
                     </div>
                 </a>
                 
-                <a href="mobile.php">
+                <a href="individualCategoryItems.php?key=mobile">
                     <div class="imgcontainer">
                         <img src="images/mobileAccessories2.png" alt="b">
                         <h6>Mobile accessories</h6>
@@ -48,14 +50,14 @@
                 </a>
             </div>
             <div class="row">
-                <a href="speakers.php">
+                <a href="individualCategoryItems.php?key=speakers">
                     <div class="imgcontainer">
                         <img src="images/speakers.png" alt="b">
                         <h6>Speakers</h6>
                     </div>
                 </a>
                 
-                <a href="gaming.php">
+                <a href="individualCategoryItems.php?key=gaming">
                     <div class="imgcontainer">
                         <img src="images/gaming.png" alt="b">                        
                         <h6>Gaming</h6>

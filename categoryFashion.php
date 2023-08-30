@@ -21,8 +21,10 @@
                 <h1>Campus Exchange</h1>
             </a>
             <div class="search-bar">
-                <input type="search" id="search-input" placeholder="Search for Products.. ">
-                <a href="products.php"><button type="submit" id="search-btn">Search</button></a>
+                <form action="search.php" method="post">
+                    <input type="search" name = "search-input" id="" placeholder="Search for Products.. ">
+                    <button type="submit" id="search-btn">Search</button>
+                </form>
             </div>
             <div class="nav-btns">
                 <a href="sellerProfile.php"><button id="BtnSell">Sell</button></a>
@@ -33,14 +35,14 @@
         <div class="Category">
             <h1>Shop Fashion</h1>
             <div class="row">
-                <a href="MensTshirt.php">
+                <a href="individualCategoryItems.php?key=mens-tshirt">
                     <div class="imgcontainer">
                         <img src="images/mensTshirt.png" alt="b">
                         <h6>Mens Tshirts</h6>
                     </div>
                 </a>
                 
-                <a href="jeans.php">
+                <a href="individualCategoryItems.php?key=jeans">
                     <div class="imgcontainer">
                         <img src="images/mensJeans.png" alt="b">
                         <h6>Mens Jeans</h6>
@@ -48,14 +50,14 @@
                 </a>
             </div>
             <div class="row">
-                <a href="sarees.php">
+                <a href="individualCategoryItems.php?key=sarees">
                     <div class="imgcontainer">
                         <img src="images/womensSarees.png" alt="b">
                         <h6>Sarees</h6>
                     </div>
                 </a>
                 
-                <a href="kurtas.php">
+                <a href="individualCategoryItems.php?key=kurtas">
                     <div class="imgcontainer">
                         <img src="images/mensKurta.png" alt="b">
                         <h6>Mens kurtas</h6>

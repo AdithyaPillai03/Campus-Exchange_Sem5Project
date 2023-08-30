@@ -20,8 +20,10 @@
                 <h1>Campus Exchange</h1>
             </a>
             <div class="search-bar">
-                <input type="search" id="search-input" placeholder="Search for Products.. ">
-                <a href="products.php"><button type="submit" id="search-btn">Search</button></a>
+                <form action="search.php" method="post">
+                    <input type="search" name = "search-input" id="" placeholder="Search for Products.. ">
+                    <button type="submit" id="search-btn">Search</button>
+                </form>
             </div>
             <div class="nav-btns">
                 <a href="sellerProfile.php"><button id="BtnSell">Sell</button></a>
@@ -36,7 +38,9 @@
                 include '_connection.php';
                 $sql = "SELECT * FROM `products` where `category`='electronics'";
                 $result = mysqli_query($conn, $sql);
-
+                $resultCount = mysqli_num_rows($result);
+                if ($resultCount > 0)
+                    {
                     while ($row = mysqli_fetch_assoc($result)) {
                         $img = $row["img_loc"];
                         $price = $row["price"];
@@ -44,13 +48,17 @@
                         $type = $row["type"];
                         // echo "image is.$img";
                         echo "
-                            <a href='canonEOSm50.php'>
+                            <a href='individualProduct.php'>
                                 <div class='imgcontainer'>
                                     <img src='userUploads/$img' alt='$type'>                        
                                     <h6>₹$price</h6>
                                     <h6>$title</h6>
                                 </div>
                             </a>";
+                    }
+                }
+                else{
+                        echo "<h1> There is no products related to your search! Try something else!!! Sorry for the inconvenience!";
                     }
                 $conn->close();
             ?>
