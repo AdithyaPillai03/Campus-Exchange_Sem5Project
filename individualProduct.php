@@ -30,6 +30,14 @@
         </div>
         <div class="product">
             <div class="imgContainer">
+                <?php
+                    if (isset($_GET['name'])) {
+                        $name = $_GET['name'];
+                        // echo $key;
+                    }
+                    echo "the name of the product is: '$name'";
+                ?>
+
                 <img src="images/sports.jpg" alt="img"><br>
                 <a href="orders.php"><button type="submit" class="buyBtn">BUY NOW</button><br></a>
                 <a href="cart.php"><button type="submit" class="addtoCartBtn">ADD TO CART</button></a>

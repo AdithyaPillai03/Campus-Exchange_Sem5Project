@@ -57,7 +57,7 @@
                             $type = $row["type"];
                             // echo "image is.$img";
                             echo "
-                                <a href='individualProduct.php'>
+                                <a href='individualProduct.php?name=$title'>
                                     <div class='imgcontainer'>
                                         <img src='userUploads/$img' alt='$type'>                        
                                         <h6>₹$price</h6>
@@ -67,7 +67,7 @@
                         }
                     }
                     else{
-                        echo "<h1> There is no products related to your search! Try something else!!! Sorry for the inconvenience!";
+                        echo "<h1> There is no products related to this category! Sorry for the inconvenience!!!";
                     }
                     $conn->close();
                 ?>
