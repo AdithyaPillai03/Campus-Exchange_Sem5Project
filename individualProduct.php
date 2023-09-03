@@ -33,26 +33,42 @@
                 <?php
                     if (isset($_GET['name'])) {
                         $name = $_GET['name'];
-                        // echo $key;
                     }
-                    echo "the name of the product is: '$name'";
-                ?>
+                    // echo "the name of the product is: '$name'";
+                    include '_connection.php';
+                    $sql = "SELECT * FROM `products` where `title`='$name'";
+                    $result = mysqli_query($conn, $sql);
+                    $resultCount = mysqli_num_rows($result);
+                    if ($resultCount > 0)
+                    {
+                        while ($row = mysqli_fetch_assoc($result)) {
+                            $img = $row["img_loc"];
+                            $price = $row["price"];
+                            $desc = $row["description"];
+                        }
+                    }
+                
 
-                <img src="images/sports.jpg" alt="img"><br>
+                echo "<img src='userUploads/$img' alt='$name.img'><br>"
+                ?>
                 <a href="orders.php"><button type="submit" class="buyBtn">BUY NOW</button><br></a>
                 <a href="cart.php"><button type="submit" class="addtoCartBtn">ADD TO CART</button></a>
             </div>
             <div class="prodDesc">
-                <h6>SONY ZV-E10 Mirrorless Camera</h6>
-                <h2>₹58924/-</h2>
-                <p>Highlights
-                    <li>4K video with oversampling for greater detail, Easy, impressive vlogs, One-touch control of background blurring, Interchangeable-lens camera for vlogging, Flexible connectivity for easy sharing, Designed for easy selfie and vlog shoots, Protection against recording failures, Fast, precise autofocus, Leave it up to the camera to focus on you, Easy background blur control, Natural-looking skin tones, Smooth and stable images even while walking, Easy sped-up and slowed-down motion, Clear recording even outdoors, For even higher audio quality, Optional grip for easy one-handed operation, Add special effects in-camera, Edit movies from your smartphone, Create time-lapse movies, Wi-Fi & Bluetooth
-                        Effective Pixels: 24.2 MP
-                        Sensor Type: CMOS
-                        WiFi Available
-                        4k</li>
-
-                </p>
+                <?php
+                    echo "<h6>$name</h6>
+                    <h2>$price./-</h2>";
+                    $descArray = explode(',', $desc);
+                    echo "<p>Highlights</p>";
+                    echo "<ul>";
+                    foreach ($descArray as $item) {
+                        echo "<li>$item</li>";
+                    }
+                    echo "</ul>";
+                // <p>Highlights
+                //     <li>$desc</li>
+                // </p>
+                ?>
             </div>
         </div>
 </body>
