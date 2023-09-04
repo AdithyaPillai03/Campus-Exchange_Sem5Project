@@ -24,7 +24,7 @@
             </div>
             <div class="nav-btns">
                 <a href="sellerProfile.php"><button id="BtnSell">Sell</button></a>
-                <a href="home.php"><button><i class="fa-solid fa-cart-shopping"></i></button></a>
+                <a href="cart.php"><button><i class="fa-solid fa-cart-shopping"></i></button></a>
                 <a href="userProfile.php"><button><i class="fa-solid fa-user"></i></button></a>
             </div>
         </div>
@@ -52,7 +52,9 @@
                 echo "<img src='userUploads/$img' alt='$name.img'><br>"
                 ?>
                 <a href="orders.php"><button type="submit" class="buyBtn">BUY NOW</button><br></a>
-                <a href="cart.php"><button type="submit" class="addtoCartBtn">ADD TO CART</button></a>
+                <?php
+                echo "<a href='cart.php'><button type='submit' class='addtoCartBtn'>ADD TO CART</button></a>";
+                ?>
             </div>
             <div class="prodDesc">
                 <?php
