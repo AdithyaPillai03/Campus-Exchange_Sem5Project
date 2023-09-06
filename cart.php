@@ -36,24 +36,34 @@
         <br>
         <br>
         <p style="font-size: 50px;color: #0E457B;">My Cart</p>
-        <div class="cart">
-            <div class="prodDetails">
-                <div class="product">
-                    <img src="images/electonics.jpg" alt="hii"><br>
-                    <div class="details">
-                        <h3>SONY ZV-E10 Mirrorless Camera</h3>
-                        <h5>₹58924/-</h5>
-                        <button type="submit" class="buyBtn">Remove from cart</button>
-                    </div>
-                </div>
-                <div class="product">
-                    <img src="images/speakers.png" alt="img"><br>
-                    <div class="details">
-                        <h3>Cricket bat - willow wood</h3>
-                        <h5>₹3999/-</h5>
-                        <button type="submit" class="buyBtn">Remove from cart</button>
-                    </div>
-                </div>
+        
+            <?php
+                session_start();
+                if(isset($_SESSION['cart'])){
+                    echo '
+                    <div class="cart">
+                        <div class="prodDetails">';
+                        foreach($_SESSION['cart'] as $key => $value)
+                        {
+                            $image = $value['img'];
+                            echo "
+                            <div class='product'>
+                                <img src='userUploads/$image' alt='hii'><br>
+                                <div class='details'>
+                                    <h3>{$value['name']}</h3>
+                                    <h5>{$value['price']}/-</h5>
+                                    <button type='submit' class='buyBtn'>Remove from cart</button>
+                                </div>
+                            </div>
+                            ";
+                        }
+                }
+                else{
+                    echo "<h5 style='font-size: 50px;color: #0E457B;'>Gomen nasayi!! Onegai add items to the cart!</h5>";
+                }
+
+            ?>
+
                 <!-- <div class="product">
                     <img src="images/fashion.jpg" alt="img"><br>
                     <div class="details">
@@ -94,12 +104,6 @@
                         <button type="submit" class="buyBtn">Remove from cart</button>
                     </div>
                 </div> -->
-            </div>
-            <div class="orderDetails">
-                <h3 style="font-size: 50px;color: #0E457B;">Order Details</h3>
-                <p style="font-size: 30px;color: #0E457B;">Total Amount: ₹63921/-</p>
-                <button type="submit" class="buyBtn">Place Order</button>
-            </div>
-        </div>
+            
 </body>
 </html>

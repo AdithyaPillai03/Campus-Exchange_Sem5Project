@@ -31,6 +31,8 @@
         <div class="product">
             <div class="imgContainer">
                 <?php
+                session_start();
+                print_r( $_SESSION['cart']);
                     if (isset($_GET['name'])) {
                         $name = $_GET['name'];
                     }
@@ -51,10 +53,25 @@
 
                 echo "<img src='userUploads/$img' alt='$name.img'><br>"
                 ?>
-                <a href="orders.php"><button type="submit" class="buyBtn">BUY NOW</button><br></a>
-                <?php
-                echo "<a href='cart.php'><button type='submit' class='addtoCartBtn'>ADD TO CART</button></a>";
-                ?>
+                <form action='_manage_cart.php' method='POST'>
+                    <input type='hidden' name='title' value='<?php echo $name; ?>'>
+                    <input type='hidden' name='price' value='<?php echo $price; ?>'>
+                    <input type='hidden' name='img' value='<?php echo $img; ?>'>
+                    <!-- Add other form fields as needed -->
+                    <button type='submit' class='addtoCartBtn'>Add to Cart</button>
+                </form>
+
+                <form action='orders.php' method='POST'>
+                    <input type='hidden' name='title' value='<?php echo $name; ?>'>
+                    <input type='hidden' name='price' value='<?php echo $price; ?>'>
+                    <input type='hidden' name='img' value='<?php echo $img; ?>'>
+                    <!-- Add other form fields as needed -->
+                    <button type="submit" class="buyBtn">BUY NOW</button>
+                </form>
+                
+                <!-- echo "<form action='_manage_cart.php?title=$name,price=$price' method='POST'><button type='submit' class='addtoCartBtn'>ADD TO CART</button></form>"; -->
+
+                
             </div>
             <div class="prodDesc">
                 <?php
