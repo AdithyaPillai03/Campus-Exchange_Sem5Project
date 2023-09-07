@@ -9,6 +9,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
         echo '<br>';
         $title = $_POST['title'];
         $price = $_POST['price'];
+        // $price = (int)$price1;
         $img = $_POST['img'];
         $items = array_column($_SESSION['cart'],'name');
         if (in_array($title,$items)){

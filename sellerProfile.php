@@ -17,8 +17,13 @@ if (isset($_SESSION['userType']))
     }
 }
 else{
-    header("Location: login.php", true, 303);
-    exit();
+    echo "<script>
+        console.log('Before redirection');
+        alert('You are not logged in. Please login if you are a seller.');
+        window.location.href = 'login.php';
+    </script>";
+    // header("Location: login.php", true, 303);
+    // exit();
 }
 ?>
 
@@ -71,7 +76,7 @@ else{
         </div>
 
         <div class="addItem" id="addItem" style="display: none;">
-            <form action="/sem5 Project New/new Resources/imgUpload.php" method="post" enctype="multipart/form-data">
+            <form action="new Resources/itemUpload.php" method="post" enctype="multipart/form-data">
                 <label for="category">Select Category:</label>
                 <input type="text" name="category" id ="category" required>
                 <br>

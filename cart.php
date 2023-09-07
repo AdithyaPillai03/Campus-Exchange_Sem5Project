@@ -43,20 +43,30 @@
                     echo '
                     <div class="cart">
                         <div class="prodDetails">';
-                        foreach($_SESSION['cart'] as $key => $value)
-                        {
-                            $image = $value['img'];
-                            echo "
-                            <div class='product'>
-                                <img src='userUploads/$image' alt='hii'><br>
-                                <div class='details'>
-                                    <h3>{$value['name']}</h3>
-                                    <h5>{$value['price']}/-</h5>
-                                    <button type='submit' class='buyBtn'>Remove from cart</button>
+                        $total = 0;
+                            foreach($_SESSION['cart'] as $key => $value)
+                            {
+                                $total = $total + (int)$value['price'];
+                                $image = $value['img'];
+                                echo "
+                                <div class='product'>
+                                    <img src='userUploads/$image' alt='hii'><br>
+                                    <div class='details'>
+                                        <h3>{$value['name']}</h3>
+                                        <h5>{$value['price']}/-</h5>
+                                        <button type='submit' class='removeBtn'>Remove from cart</button>
+                                    </div>
                                 </div>
-                            </div>
-                            ";
-                        }
+                                ";
+                            }
+                            echo "<div class='orderDetails'>
+                                <h3 style='font-size: 50px;color: #0E457B;'>Order Details</h3>
+                                <p style='font-size: 30px;color: #0E457B;'>Total Amount: $total/-</p>
+                                <button type='submit' class='buyBtn'>Place Order</button>
+                                </div>
+                                </div>
+                                </div>";
+                        
                 }
                 else{
                     echo "<h5 style='font-size: 50px;color: #0E457B;'>Gomen nasayi!! Onegai add items to the cart!</h5>";
