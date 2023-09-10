@@ -24,23 +24,33 @@
         $emailCount = mysqli_num_rows($result);
 
         if ($emailCount == 0){
-            if ($password == $cpassword){
-                $sql = "INSERT INTO `user` (`name`, `email`, `password`, `type`, `class`) VALUES ('$name', '$email', '$password', 'user' , '$class')";
-                $result = mysqli_query($conn, $sql);
-
-                if ($result){
-                    echo "your name is '$name' , email is '$email' and roll number is '$rollNo'";
-                    echo "Your data has been successfully stored in our database"; 
-                    header("Location: login.php", true, 303);
-                    exit();
+            // Check if the password is at least 6 characters long
+            if (strlen($password) < 6) {
+                // Password is too short
+                echo '<script>
+                window.location.href = "signup.php";
+                alert("Password must be at least 6 characters long.");
+                </script>';
+            }
+            else{
+                if ($password == $cpassword){
+                    $sql = "INSERT INTO `user` (`name`, `email`, `password`, `type`, `class`) VALUES ('$name', '$email', '$password', 'user' , '$class')";
+                    $result = mysqli_query($conn, $sql);
+                    
+                    if ($result){
+                        echo "your name is '$name' , email is '$email' and roll number is '$rollNo'";
+                        echo "Your data has been successfully stored in our database"; 
+                        header("Location: login.php", true, 303);
+                        exit();
+                    }
                 }
             }
         }
         else{
             if ($emailCount > 0){
             echo '<script>
-            window.location.href = "login.php";
-            alert("Email already exists!! Try remembering password and Log in");
+            window.location.href = "signup.php";
+            alert("Email already exists!! Try remembering password and Log in OR Signup with new Email !!");
             </script>';
             }
         }

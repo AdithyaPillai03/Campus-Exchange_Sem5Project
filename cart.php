@@ -36,7 +36,7 @@
         <br>
         <br>
         <p style="font-size: 50px;color: #0E457B;">My Cart</p>
-        
+        <p style="font-family: 'Poppins', sans-serif;color: red;">There is a problem with our cart - If you logout without purchasing but have contents in your cart then when you login next time then cart state won't be maintained! Please act accordingly and buy the things you want in your cart before loggin out Or just DON'T LOGOUT!! Sorry for the inconvenience caused...</p>
             <?php
                 session_start();
                 if(isset($_SESSION['cart'])){

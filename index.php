@@ -28,6 +28,8 @@
                 <a href="userProfile.php"><button><i class="fa-solid fa-user"></i></button></a>
             </div>
         </div>
+        <br>
+        <br>
         <?php
             session_start();
             if (isset($_SESSION['user'])) {
