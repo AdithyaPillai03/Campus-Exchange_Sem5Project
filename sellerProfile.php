@@ -102,28 +102,34 @@ else{
             </form>
         </div>
         <div class="delItem" id="delItem" style="display: none;">
-            <form action="" onsubmit="">
+            <form action="itemDelete.php" method="post">
                 <label for="prodSelect">Select Item:</label>
-                <input type="text" id ="prodSelect" required>
+                <input type="text" name="prodSelect" id="prodSelect" required>
                 <button type="submit" id="delItemActionBtn">CONFIRM DELETE</button>
             </form>
         </div>
         <div class="updateItem" id="updateItem" style="display: none;">
-            <form action="" onsubmit="">
+            <!-- <button type="submit" id="updateDesc">Add Item</button>
+            <button type="submit" id="updatePrice">Delete Item</button>
+            <button type="submit" id="updateName">Update Item</button> -->
+
+            <form action="itemUpdate.php" method="post">
                 <label for="prodSelect">Select Product:</label>
-                <input type="text" id ="prodSelect" required>
+                <input type="text" name="prodSelect" id ="prodSelect" required>
                 <br>
                 <label for="updProdName">Change name of product:</label>
-                <input type="text" id ="updProdName" required>
+                <input type="text" name="updProdName" id ="updProdName" >
                 <br>
                 <label for="updProdDesc">Change description of product:</label>
-                <textarea name="text" id="updProdDesc" cols="50" rows="8"></textarea>
+                <textarea name="updProdDesc" id="updProdDesc" cols="50" rows="8"></textarea>
                 <br>
                 <label for="updProdPrice">Change price of product:</label>
-                <input type="number" id ="updProdPrice" required>
+                <input type="number" name="updProdPrice" id ="updProdPrice" >
                 <br>
                 <label for="updKeywords">Select Keywords:</label>
-                <input type="text" id ="updKeywords" required>
+                <input type="text" name="updKeywords" id ="updKeywords" >
+                <br>
+                <p>If you want to change 'image' of product, 'category' or 'type of product' then please delete the entire product and add again</p>
                 <br>
                 <button type="submit" id="passChangeActionBtn">CONFIRM UPDATE</button>
             </form>
