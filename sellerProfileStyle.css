@@ -76,7 +76,10 @@ h1{
     /* color: #0E457B; */
 }
 
-#passChangeBtn{
+
+
+.details a, #passChangeBtn{
+    padding: 10px;
     border-radius: 25px;
     height: 100%;
     background: #0E457B;

@@ -2,7 +2,18 @@
     // session_start();
     // unset($_SESSION['userType']);
 ?>
+<?php
 
+session_start();
+
+if (!isset($_SESSION['userID']))
+{
+    echo "<script>
+        alert('You are not logged in. Please login');
+        window.location.href = 'login.php';
+    </script>";
+}
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -27,6 +38,7 @@
             <h6 id="username">Adithya Pillai</h6>
             <h6 id="email">adiurpillai@gmail.com</h6>
             <button id="passChangeBtn">Change Password</button>
+            <a href="logout.php">Logout</a>
         </div>
         <div class="passAlter" id="passAlter" style="display: none;">
             <form action="" onsubmit="return validatePassword()">

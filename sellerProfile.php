@@ -52,6 +52,7 @@ else{
             <h6 id="username">Adithya Pillai</h6>
             <h6 id="email">adiurpillai@gmail.com</h6>
             <button id="passChangeBtn">Change Password</button>
+            <a href="logout.php"><button>Logout</button></a>
         </div>
         <div class="passAlter" id="passAlter" style="display: none;">
             <form action="" onsubmit="return validatePassword()">
