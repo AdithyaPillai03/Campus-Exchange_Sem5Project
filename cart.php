@@ -54,7 +54,10 @@
                                     <div class='details'>
                                         <h3>{$value['name']}</h3>
                                         <h5>{$value['price']}/-</h5>
-                                        <button type='submit' class='removeBtn'>Remove from cart</button>
+                                        <form action='remove_item.php' method='POST'>
+                                            <input type='hidden' name='item_key' value='{$value['name']}'>
+                                            <button type='submit' class='removeBtn'>Remove from cart</button>
+                                        </form>
                                     </div>
                                 </div>
                                 ";
