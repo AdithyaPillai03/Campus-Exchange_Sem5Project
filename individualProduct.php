@@ -44,6 +44,7 @@
                     if ($resultCount > 0)
                     {
                         while ($row = mysqli_fetch_assoc($result)) {
+                            $prod_id = $row["prod_id"];
                             $img = $row["img_loc"];
                             $price = $row["price"];
                             $desc = $row["description"];
@@ -55,18 +56,19 @@
                 ?>
                 <form action='_manage_cart.php' method='POST'>
                     <input type='hidden' name='title' value='<?php echo $name; ?>'>
+                    <input type='hidden' name='id' value='<?php echo $prod_id; ?>'>
                     <input type='hidden' name='price' value='<?php echo $price; ?>'>
                     <input type='hidden' name='img' value='<?php echo $img; ?>'>
-                    <!-- Add other form fields as needed -->
                     <button type='submit' class='addtoCartBtn'>Add to Cart</button>
                 </form>
 
-                <form action='orders.php' method='POST'>
+                <form action='payment_process.php' method='POST'>
                     <input type='hidden' name='title' value='<?php echo $name; ?>'>
+                    <input type='hidden' name='id' value='<?php echo $prod_id; ?>'>
                     <input type='hidden' name='price' value='<?php echo $price; ?>'>
                     <input type='hidden' name='img' value='<?php echo $img; ?>'>
                     <!-- Add other form fields as needed -->
-                    <button type="submit" class="buyBtn">BUY NOW</button>
+                    <button type="submit" name="directBuyBtn" class="directBuyBtn">BUY NOW</button>
                 </form>
                 
                 <!-- echo "<form action='_manage_cart.php?title=$name,price=$price' method='POST'><button type='submit' class='addtoCartBtn'>ADD TO CART</button></form>"; -->

@@ -9,6 +9,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
         echo '<br>';
         $title = $_POST['title'];
         $price = $_POST['price'];
+        $prod_id = $_POST['id'];
         // $price = (int)$price1;
         $img = $_POST['img'];
         $items = array_column($_SESSION['cart'],'name');
@@ -20,7 +21,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
         }
         else{
             $index = count($_SESSION['cart']);
-            $_SESSION['cart'][$index] = array('name'=>$title,'price'=>$price,'img'=>$img);
+            $_SESSION['cart'][$index] = array('name'=>$title,'price'=>$price,'img'=>$img, 'id'=>$prod_id);
             // print_r( $_SESSION['cart']);
             echo "<script>
             alert('Item added to cart');
@@ -35,6 +36,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
         // echo "new cart";
         $title = $_POST['title'];
         $price = $_POST['price'];
+        $prod_id = $_POST['id'];
         $img = $_POST['img'];
         echo "<script>
             alert('Item added to cart');
@@ -42,7 +44,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
             </script>";
         // echo "$tp";
         // echo "$tp";
-        $_SESSION['cart'][0] = array('name'=>$title,'price'=>$price,'img'=>$img);
+        $_SESSION['cart'][0] = array('name'=>$title,'price'=>$price,'img'=>$img, 'id'=>$prod_id);
         // print_r( $_SESSION['cart']);
     }
 }
