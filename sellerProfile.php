@@ -79,13 +79,31 @@ else{
         <div class="addItem" id="addItem" style="display: none;">
             <form action="itemUpload.php" method="post" enctype="multipart/form-data">
                 <label for="category">Select Category:</label>
-                <input type="text" name="category" id ="category" required>
+                <select id="category" name="category">
+                    <option value="cricket">cricket</option>
+                    <option value="badminton">badminton</option>
+                    <option value="cycling">cycling</option>
+                    <option value="gym">gym</option>
+                    <option value="entrance">entrance</option>
+                    <option value="comics">comics</option>
+                    <option value="self-help">self-help</option>
+                    <option value="fantasy">fantasy</option>
+                    <option value="photography">photography</option>
+                    <option value="mobile">mobile</option>
+                    <option value="speakers">speakers</option>
+                    <option value="gaming">gaming</option>
+                    <option value="mens-tshirt">mens-tshirt</option>
+                    <option value="jeans">jeans</option>
+                    <option value="sarees">sarees</option>
+                    <option value="kurtas">kurtas</option>
+                </select>
+                <!-- <input type="text" name="category" id ="category" required> -->
                 <br>
                 <label for="prodName">Enter name of product:</label>
                 <input type="text" name="prodName" id ="prodName" required>
                 <br>
                 <label for="prodDesc">Enter description of product:</label>
-                <textarea name="prodDesc" id="prodDesc" cols="50" rows="8"></textarea>
+                <textarea name="prodDesc" id="prodDesc" cols="50" rows="8" placeholder="Please refrain from using any quotations."></textarea>
                 <br>
                 <label for="prodPrice">Enter price of product:</label>
                 <input type="number" name="prodPrice" id ="prodPrice" required>

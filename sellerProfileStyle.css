@@ -106,7 +106,7 @@ label{
     font-size: 24px;
 }
 
-input{
+input,select{
     margin: 20px;
     height: 30px;
     background: #d3d3d3;
