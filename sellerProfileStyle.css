@@ -78,7 +78,7 @@ h1{
 
 
 
-.details a, #passChangeBtn{
+.details button, #passChangeBtn{
     padding: 10px;
     border-radius: 25px;
     height: 100%;

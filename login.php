@@ -56,7 +56,7 @@
         <h4>Join the Student Community: Connect, Earn, and Thrive!</h4>
     </div>
     <div class="signUpForm">
-        <form action="/sem5 Project New/new Resources/login.php" method="post">
+        <form action="login.php" method="post">
               <label for="email">Enter E-mail:</label>
               <input type="email" id="email" name="email" required>
               <label for="password">Enter Password: </label>

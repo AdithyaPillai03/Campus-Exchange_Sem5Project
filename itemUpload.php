@@ -11,6 +11,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
     $type = $_POST['type'];
     
     $sql = "INSERT INTO `products` (`seller_id`, `title`, `description`, `price`, `img_loc`, `category`,`type`,`keyword`) VALUES (2, '$title', '$desc', '$price', '$img' , '$category', '$type', '$keyword')";
+    // echo $sql;
     $result = mysqli_query($conn, $sql);
 
     if ($result){
@@ -18,7 +19,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
         echo '<script>
         // window.location.href = "login.php";
         alert("File uploaded");
-        //window.location.href = "sellerSignup.php";
+        window.location.href = "sellerSignup.php";
         </script>';
     }
     else{

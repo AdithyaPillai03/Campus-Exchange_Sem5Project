@@ -49,8 +49,8 @@ else{
     <div class="mainContainer">
         <a href="index.php"><h1>Campus Exchange</h1></a>
         <div class="details">
-            <h6 id="username">Adithya Pillai</h6>
-            <h6 id="email">adiurpillai@gmail.com</h6>
+            <h6 id="username"><?php echo strtoupper($_SESSION['user']) ?></h6>
+            <h6 id="type"><?php echo $_SESSION['userType'] ?></h6>
             <button id="passChangeBtn">Change Password</button>
             <a href="logout.php"><button>Logout</button></a>
         </div>
@@ -77,7 +77,7 @@ else{
         </div>
 
         <div class="addItem" id="addItem" style="display: none;">
-            <form action="new Resources/itemUpload.php" method="post" enctype="multipart/form-data">
+            <form action="itemUpload.php" method="post" enctype="multipart/form-data">
                 <label for="category">Select Category:</label>
                 <input type="text" name="category" id ="category" required>
                 <br>
@@ -134,6 +134,12 @@ else{
                 <br>
                 <button type="submit" id="passChangeActionBtn">CONFIRM UPDATE</button>
             </form>
+        </div>
+        <br>
+        <br>        
+        <div class="userOrderDetails">
+            <p style="font-size: 30px;color: #0E457B;">Adithya From SYCS has placed an order for 'BOAR'</p>
+            <img src="userUploads/inosuke.jpg" alt="image2">
         </div>
     </div>
 

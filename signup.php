@@ -63,7 +63,7 @@
         <h4>Join the Student Community: Connect, Earn, and Thrive!</h4>
     </div>
         <div class="signUpForm">
-            <form action="/sem5 Project New/new Resources/signup.php" method="post">
+            <form action="signup.php" method="post">
                 <div class="formGrp">
                     <label for="name">Enter Name:</label>
                     <input type="text" name="name" class="name" id="name" required>
