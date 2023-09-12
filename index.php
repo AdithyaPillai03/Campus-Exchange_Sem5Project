@@ -114,7 +114,21 @@
             <p>Turn your unused items into cash effortlessly. Become a seller on our marketplace app and connect with a vibrant community of buyers. List, sell, and earn with ease. Join Today!</p>
             <a href="register.php"><button>START SELLING NOW</button></a>
         </div>
-    </div>
+        <br>
+        <br>
     
+        <div class="feedback">
+            <h1>Send Us Your Feedback</h1>
+            <form id="feedback-form" action="feedback.php" method="post">
+                <label for="fbname">Name:</label>
+                <input type="text" id="fbname" name="fbname" required>
+                <label for="fbemail">Email:</label>
+                <input type="email" id="fbemail" name="fbemail" required>
+                <label for="feedback">Feedback:</label>
+                <textarea id="feedback" name="feedback" rows="6" required></textarea>
+                <button type="submit">Submit Feedback</button>
+            </form>
+        </div>
+    </div>
 </body>
 </html>
