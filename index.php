@@ -112,7 +112,7 @@
         <div class="becomeSellerCta">
             <h1>Become A Seller</h1>
             <p>Turn your unused items into cash effortlessly. Become a seller on our marketplace app and connect with a vibrant community of buyers. List, sell, and earn with ease. Join Today!</p>
-            <a href="register.php"><button>START SELLING NOW</button></a>
+            <a href="sellerSignup.php"><button>START SELLING NOW</button></a>
         </div>
         <br>
         <br>

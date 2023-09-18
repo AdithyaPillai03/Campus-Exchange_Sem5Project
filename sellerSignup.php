@@ -68,6 +68,7 @@
     </div>
         <div class="signUpForm">
             <form action="sellerSignup.php" method="post">
+                <p style="color:#0E457B;">SELLER SIGNUP</p>
                 <div class="formGrp">
                     <label for="name">Enter Name:</label>
                     <input type="text" name="name" class="name" id="name" required>

@@ -8,6 +8,7 @@ session_start();
 
 if (!isset($_SESSION['userID']))
 {
+    $_SESSION['returnURL'] = $_SERVER['REQUEST_URI']; 
     echo "<script>
         alert('You are not logged in. Please login');
         window.location.href = 'login.php';

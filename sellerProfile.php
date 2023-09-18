@@ -17,6 +17,7 @@ if (isset($_SESSION['userType']))
     }
 }
 else{
+    $_SESSION['returnURL'] = $_SERVER['REQUEST_URI']; 
     echo "<script>
         console.log('Before redirection');
         alert('You are not logged in. Please login if you are a seller.');

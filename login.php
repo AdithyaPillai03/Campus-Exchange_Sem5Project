@@ -27,8 +27,16 @@
                     $_SESSION['user'] = $row["name"];
                     $_SESSION['userID'] = $row["user_id"];
                     $_SESSION['userType'] = $row["type"];
-                    header("Location: index.php", true, 303);
-                    exit();
+                    if (isset($_SESSION['returnURL'])) {
+                        $returnURL = $_SESSION['returnURL'];
+                        unset($_SESSION['returnURL']);
+                        header("Location: $returnURL");
+                        exit();
+                    } else {
+                        header("Location: index.php", true, 303);
+                        exit();
+                        
+                    }
                 }
                 else{
                     echo '<script>

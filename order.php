@@ -1,3 +1,18 @@
+<?php
+session_start();
+    if (!isset($_SESSION['userID'])) 
+    {
+        $_SESSION['returnURL'] = $_SERVER['REQUEST_URI']; 
+        echo "<script>
+            alert('Please login first.');
+            window.location.href = 'login.php';
+        </script>";
+        // header("Location: login.php");
+        // exit();
+    }
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,7 +26,6 @@
     <link rel="stylesheet" href="order.css">
 </head>
 <body>
-    
     <div class="container">
         <h1>Payment Details</h1>
         <form id="paymentForm" action="payment_process.php" method="post">
@@ -34,7 +48,7 @@
             <div class="form-group">
                 <label for="amount">Amount:</label>
                 <?php
-                session_start();
+                
                 if (isset($_POST['final_amt'])) {
                         $amt = $_POST['final_amt'];
                         echo "<h1>$amt</h1>";

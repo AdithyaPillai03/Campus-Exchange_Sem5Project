@@ -75,7 +75,7 @@
                         
                 }
                 else{
-                    echo "<h5 style='font-size: 50px;color: #0E457B;'>Gomen nasayi!! Onegai add items to the cart!</h5>";
+                    echo "<h5 style='font-size: 50px;color: #0E457B;'>Looks like you don't have anything here yet!! Please add items to the cart!</h5>";
                 }
 
             ?>
