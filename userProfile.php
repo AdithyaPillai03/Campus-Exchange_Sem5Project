@@ -36,8 +36,8 @@ if (!isset($_SESSION['userID']))
     <div class="mainContainer">
         <a href="index.php"><h1>Campus Exchange</h1></a>
         <div class="details">
-            <h6 id="username">Adithya Pillai</h6>
-            <h6 id="email">adiurpillai@gmail.com</h6>
+            <h6 id="username"><?php  echo  ucfirst($_SESSION['user']);?></h6>
+            <h6 id="type">Type: <?php  echo  ucfirst($_SESSION['userType']);?></h6>
             <button id="passChangeBtn">Change Password</button>
             <a href="logout.php">Logout</a>
         </div>

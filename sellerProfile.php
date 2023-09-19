@@ -50,8 +50,8 @@ else{
     <div class="mainContainer">
         <a href="index.php"><h1>Campus Exchange</h1></a>
         <div class="details">
-            <h6 id="username"><?php echo strtoupper($_SESSION['user']) ?></h6>
-            <h6 id="type"><?php echo $_SESSION['userType'] ?></h6>
+            <h6 id="username"><?php echo strtoupper($_SESSION['user']); ?></h6>
+            <h6 id="type"><?php echo ucfirst($_SESSION['userType']); ?></h6>
             <button id="passChangeBtn">Change Password</button>
             <a href="logout.php"><button>Logout</button></a>
         </div>
@@ -156,10 +156,10 @@ else{
         </div>
         <br>
         <br>        
-        <div class="userOrderDetails">
+        <!-- <div class="userOrderDetails">
             <p style="font-size: 30px;color: #0E457B;">Adithya From SYCS has placed an order for 'BOAR'</p>
             <img src="userUploads/inosuke.jpg" alt="image2">
-        </div>
+        </div> -->
     </div>
 
     <script>
