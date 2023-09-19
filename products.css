@@ -33,29 +33,52 @@ a{
     font-family: 'Playfair Display', serif;
     font-style: italic;
 }
-.search-bar {
+.search-bar{
+    /* background: red; */
+    /* flex: 1; */
     display: flex;
     align-items: center;
-    max-width: 100%;
-    width: 40%;
-    margin: 0 auto;
+    background-color: #D3D3D3;
+    border-radius: 40px;
+    padding: 5px;
+    width: 30%;
+    height:60%;
 }
 
-#search-input {
-    flex-grow: 1;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+.search-bar form{
+    display: flex;
+    align-items: center;
+    width: 100%;
 }
 
-#search-btn {
-    background-color: #0E457B;
-    color: white;
+.search-bar form input{
+    flex: 1;
     border: none;
-    border-radius: 5px;
-    padding: 10px 20px;
-    margin-left: 10px;
+    background: none;
+    padding: 5px;
+    font-size: 22px;
+    /* width: 75%; */
+}
+
+.search-bar form input:focus{
+    border: #0E457B;
+    outline: none;
+}
+
+.search-bar form button {
+    /* margin-left: 5px; */
+    padding: 1em 2em;
+    border: none;
+    background: none;
     cursor: pointer;
+    transition: all ease 0.5s;
+}
+
+
+.search-bar form button:hover{
+    background: #0E457B;
+    color: white;
+    border-radius: 50px;
 }
 
 @media screen and (max-width: 768px) {
@@ -64,11 +87,6 @@ a{
     }
 }
 
-.search-bar button:hover{
-    background: #0E457B;
-    color: white;
-    border-radius: 50px;
-}
 
 .nav-btns{
     /* border: 2px solid black; */
@@ -78,15 +96,15 @@ a{
 }
 
 .nav-btns a{
-    /* height: 40px; 
-    width: 100px; */
+    height: 40px; 
+    width: 100px;
     /* border: 2px solid black; */
     background: none;
     overflow: hidden;
 }
 
 .nav-btns button{
-    /* width: 90%;  */
+    width: 90%; 
     height: 90%;
     border: none;
     cursor: pointer;

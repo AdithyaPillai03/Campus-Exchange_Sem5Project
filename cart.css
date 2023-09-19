@@ -25,7 +25,7 @@ body{
     top: 10%;
     left: -15%;
     border-radius: 50%;
-    transform: rotate(221deg);
+    transform: rotate(124deg);
 }
 
 .ellipse-2 {
@@ -75,28 +75,30 @@ body{
     border-radius: 40px;
     padding: 5px;
     width: 30%;
-    height:70%;
+    height:60%;
 }
 
-.search-bar input{
+.search-bar form{
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.search-bar form input{
     flex: 1;
     border: none;
     background: none;
     padding: 5px;
+    font-size: 22px;
+    /* width: 75%; */
 }
 
-.search-bar input:focus{
+.search-bar form input:focus{
     border: #0E457B;
     outline: none;
 }
-/* 
-.search-bar input::-webkit-clear-button {
-    font-size: 80px;
-    padding: 4px;
-  } */
 
-
-.search-bar button {
+.search-bar form button {
     /* margin-left: 5px; */
     padding: 1em 2em;
     border: none;
@@ -106,54 +108,11 @@ body{
 }
 
 
-.search-bar button:hover{
+.search-bar form button:hover{
     background: #0E457B;
     color: white;
     border-radius: 50px;
 }
-/* 
-.search-bar{
-    display: flex;
-    align-items: center;
-    //max-width: 100%;
-    width: 40vw;
-    margin: 0 auto;
-}
-
-.search-bar form{
-    width: 100%;
-}
-
-#search-input {
-    //flex-grow: 1;
-    padding: 10px;
-    width: 100%;
-    border: 1px solid #ccc;
-    border-radius: 50px;
-}
-
-#search-btn {
-    background-color: #0E457B;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    padding: 10px 20px;
-    margin-left: 10px;
-    cursor: pointer;
-    transition: all ease 0.5s;
-}
-
-@media screen and (max-width: 768px) {
-    .search-bar {
-        width: 80%;
-    }
-}
-
-#search-btn:hover{
-    background: #0E457B;
-    color: white;
-    border-radius: 50px;
-} */
 
 .nav-btns{
     /* border: 2px solid black; */
@@ -163,15 +122,15 @@ body{
 }
 
 .nav-btns a{
-    /* height: 40px; 
-    width: 100px; */
+    height: 40px; 
+    width: 100px;
     /* border: 2px solid black; */
     background: none;
     overflow: hidden;
 }
 
 .nav-btns button{
-    /* width: 90%;  */
+    width: 90%; 
     height: 90%;
     border: none;
     cursor: pointer;
@@ -194,6 +153,7 @@ body{
     font-size: 2.7em;
     color: #0E457B; 
 }
+
 
 
 button{
