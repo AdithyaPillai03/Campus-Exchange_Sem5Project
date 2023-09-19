@@ -66,7 +66,7 @@
                                 <h3 style='font-size: 50px;color: #0E457B;'>Order Details</h3>
                                 <p style='font-size: 30px;color: #0E457B;'>Total Amount: $total/-</p>
                                 <form action='order.php' method='POST'>
-                                    <input type='hidden' name='final_amt' value=' $total'>
+                                    <input type='hidden' name='final_amt' value='$total'>
                                     <button type='submit' class='buyBtn'>Place Order</button>
                                 </form>
                                 </div>

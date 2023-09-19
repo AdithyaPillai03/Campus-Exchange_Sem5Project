@@ -12,6 +12,12 @@
 <body>
 <?php
     session_start();
+    if(isset($_SESSION['user'])){
+        echo '<script>
+        alert("You are already logged in!! Continue your shopping or logout first..");
+        window.location.href = "index.php";
+            </script>';
+    }
     if ($_SERVER['REQUEST_METHOD'] == 'POST'){
         include '_connection.php';
         $email = $_POST['email'];

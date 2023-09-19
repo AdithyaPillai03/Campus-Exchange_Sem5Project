@@ -26,6 +26,13 @@ session_start();
     <link rel="stylesheet" href="order.css">
 </head>
 <body>
+    <br>
+    <br>
+        <?php
+            if (isset($_SESSION['user'])) {
+                echo "<h1 class='welcomeMsg' style='text-align:center;'>Hello ". ucfirst($_SESSION['user']) ."</h1>";
+            }
+        ?>
     <div class="container">
         <h1>Payment Details</h1>
         <form id="paymentForm" action="payment_process.php" method="post">
