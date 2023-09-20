@@ -26,10 +26,10 @@ session_start();
                 echo "Error: " . mysqli_error($conn);
             }
         }
-        elseif (isset($_POST['directBuyBtn'])) {
+        elseif (isset($_POST['paySingleButton'])) {
             include '_connection.php';
             $user_id = $_SESSION['userID'];
-            $prod_id = $_POST['id'];
+            $prod_id = $_SESSION['singleProd']['id'];
             $sql = "INSERT INTO `transactiondetails` (`user_id`, `prod_id`) VALUES ('$user_id', '$prod_id')";
             $result = mysqli_query($conn, $sql);
             if ($result) {

@@ -62,12 +62,14 @@
                     <button type='submit' class='addtoCartBtn'>Add to Cart</button>
                 </form>
 
-                <form action='payment_process.php' method='POST'>
+                <form action='order.php' method='POST'>
+                    <?php
+                        $_SESSION['singleProd'] = array('name'=>$name,'price'=>$price, 'id'=>$prod_id);
+                    ?>
                     <input type='hidden' name='title' value='<?php echo $name; ?>'>
                     <input type='hidden' name='id' value='<?php echo $prod_id; ?>'>
                     <input type='hidden' name='price' value='<?php echo $price; ?>'>
                     <input type='hidden' name='img' value='<?php echo $img; ?>'>
-                    <!-- Add other form fields as needed -->
                     <button type="submit" name="directBuyBtn" class="directBuyBtn">BUY NOW</button>
                 </form>
                 

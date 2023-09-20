@@ -35,36 +35,66 @@ session_start();
         ?>
     <div class="container">
         <h1>Payment Details</h1>
-        <form id="paymentForm" action="payment_process.php" method="post">
-            <div class="form-group">
-                <label for="cardNumber">Card Number:</label>
-                <input type="text" id="cardNumber" placeholder="8481 5458 5541 1004" required>
-            </div>
-            <div class="form-group">
-                <label for="cardName">Cardholder's Name:</label>
-                <input type="text" id="cardName" placeholder="Jayesh senu" required>
-            </div>
-            <div class="form-group">
-                <label for="expiryDate">Expiry Date:</label>
-                <input type="text" id="expiryDate" placeholder="MM/YY" required>
-            </div>
-            <div class="form-group">
-                <label for="cvv">CVV:</label>
-                <input type="text" id="cvv" placeholder="123" required>
-            </div>
-            <div class="form-group">
-                <label for="amount">Amount:</label>
-                <?php
-                
-                if (isset($_POST['final_amt'])) {
-                        $amt = $_POST['final_amt'];
-                        echo "<h1>$amt</h1>";
-                    }
-                ?>
-            </div>
-            <!-- <form action="order.php" method="post"> -->
-                <button type="submit" name="payButton" id="payButton">Pay Now</button>
-        </form>
+        <?php
+            if (isset($_POST['final_amt'])) {
+                unset($_SESSION['singleProd']);
+                $amt = $_POST['final_amt'];
+                echo'
+                    <form id="paymentForm" action="payment_process.php" method="post">
+                        <div class="form-group">
+                            <label for="cardNumber">Card Number:</label>
+                            <input type="text" id="cardNumber" placeholder="8481 5458 5541 1004" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="cardName">Cardholder`s Name:</label>
+                            <input type="text" id="cardName" placeholder="Jayesh senu" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="expiryDate">Expiry Date:</label>
+                            <input type="text" id="expiryDate" placeholder="MM/YY" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="cvv">CVV:</label>
+                            <input type="text" id="cvv" placeholder="123" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="amount">Amount:</label>
+                                <h1>'.$amt.'</h1>
+                        </div>
+                        <button type="submit" name="payButton" id="payButton">Pay Now</button>
+                    </form>
+                ';
+            }
+            if (isset($_SESSION['singleProd'])){
+                $amt = $_SESSION['singleProd']['price'];
+                echo'
+                    <form id="paymentForm" action="payment_process.php" method="post">
+                        <div class="form-group">
+                            <label for="cardNumber">Card Number:</label>
+                            <input type="text" id="cardNumber" placeholder="8481 5458 5541 1004" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="cardName">Cardholder`s Name:</label>
+                            <input type="text" id="cardName" placeholder="Jayesh senu" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="expiryDate">Expiry Date:</label>
+                            <input type="text" id="expiryDate" placeholder="MM/YY" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="cvv">CVV:</label>
+                            <input type="text" id="cvv" placeholder="123" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="amount">Amount:</label>
+                                <h1>'.$amt.'</h1>
+                        </div>
+                        <button type="submit" name="paySingleButton" id="payButton">Pay Now</button>
+                    </form>
+                ';
+            }
+            
+        ?>
     </div>
 </body>
 </html>
