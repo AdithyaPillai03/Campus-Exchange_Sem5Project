@@ -118,7 +118,7 @@ else{
                 <label for="img_upload">Insert Image:</label>
                 <input type="file" name="img_upload" id ="img_upload" required>
                 <br>
-                <button type="submit" name="addItemBtn" id="passChangeActionBtn">ADD</button>
+                <button type="submit" name="addItemBtn" id="addItemBtn">ADD</button>
             </form>
         </div>
         <div class="delItem" id="delItem" style="display: none;">
@@ -151,14 +151,141 @@ else{
                 <br>
                 <p>If you want to change 'image' of product, 'category' or 'type of product' then please delete the entire product and add again</p>
                 <br>
-                <button type="submit" id="passChangeActionBtn">CONFIRM UPDATE</button>
+                <button type="submit" id="updItemBtn">CONFIRM UPDATE</button>
             </form>
         </div>
         <br>
         <br>        
+        <div class="orderReqTable">
+            <!-- <?php
+                $id = $_SESSION['userID'];
+                include '_connection.php';
+                        $sql = "SELECT * FROM `transactiondetails` where `seller_id`='$id'";
+                        $result = mysqli_query($conn, $sql);
+                        $resultCount = mysqli_num_rows($result);
+                        if ($resultCount > 0)
+                        {
+                            echo "<h2 style='font-style: Poppins, sans-serif;font-size: 36px;color: #0E457B;'>ORDERS</h2>";
+                            echo "<table>
+                                    <tr>
+                                        <th>Requests</th>
+                                        <th>Action</th>
+                                    </tr>";
+                            while ($row = mysqli_fetch_assoc($result)) {
+                                $user_id = $row["user_id"];
+                                $prod_id = $row["prod_id"];
+
+
+                                $sql2 = "SELECT title,img_loc FROM `products` where prod_id = '$prod_id'";
+                                $result2 = mysqli_query($conn, $sql2);
+                                $resultCount2 = mysqli_num_rows($result2);
+                                $row2 = mysqli_fetch_assoc($result2);
+                                $name = $row2['title'];
+                                echo "<tr>
+                                    <td> User $user_id has ordered for product $name</td>
+                                    <td><a href='index.php'><button> Check transaction ID </button></a></td>
+                                </tr>";
+                                // echo "<h2> User $user_id has ordered for product $name</h2>";
+                                // echo "<button> click </button>";
+                            }
+                            echo "</table>";
+                        }
+                        else{
+                            echo "<h1> No Product requests yet";
+                        }
+                        $conn->close();
+            ?> -->
+            <?php
+                $id = $_SESSION['userID'];
+                include '_connection.php';
+
+                $sql = "SELECT td.user_id, td.transaction_id, td.prod_id, p.title, u.email
+                        FROM `transactiondetails` td
+                        INNER JOIN `products` p ON td.prod_id = p.prod_id
+                        INNER JOIN `user` u ON td.user_id = u.user_id
+                        WHERE p.seller_id = '$id'";
+
+                $result = mysqli_query($conn, $sql);
+                $resultCount = mysqli_num_rows($result);
+
+                if ($resultCount > 0) {
+                    echo "<h2 style='font-family: Poppins, sans-serif; font-size: 36px; color: #0E457B;'>ORDERS</h2>";
+                    echo "<table>
+                            <tr>
+                                <th>Requests</th>
+                                <th>ID</th>
+                                <th></th>
+                            </tr>";
+
+                    while ($row = mysqli_fetch_assoc($result)) {
+                        $email = $row["email"];
+                        $productName = $row["title"];
+                        $transactId = $row["transaction_id"];
+
+                        echo "<tr>
+                                <td>User $email has requested '$productName'</td>
+                                <td><button id='showPopup'> Check transaction ID </button></td>
+                                <td><button onclick='deleteRow(this)'>Ignore</button></td>
+                                </tr><div id='popup' class='popup'>
+                                <h2>Transaction id for this product is: </h2>
+                                <p>$transactId</p>
+                                <p style='color: red;'>Match this ID with the ID that the customer will show you on meetup</p>
+                                <button id='closePopup'>Close</button>
+                        </div>";
+                    }
+
+                    echo "</table>";
+                } else {
+                    echo "<h2 style='font-family: Poppins, sans-serif; font-size: 36px; color: #0E457B;'>No Product requests yet</h2>";
+                }
+
+                $conn->close();
+            ?>
+
+        </div>
+        
         <!-- <div class="userOrderDetails">
-            <p style="font-size: 30px;color: #0E457B;">Adithya From SYCS has placed an order for 'BOAR'</p>
+            <p style="font-size: 30px;color: #0E457B;">Adithya  for 'BOAR'</p>
             <img src="userUploads/inosuke.jpg" alt="image2">
+            <table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Age</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Alice</td>
+      <td>25</td>
+      <td><button onclick="deleteRow(this)">Delete</button></td>
+    </tr>
+    <tr>
+      <td>Bob</td>
+      <td>30</td>
+      <td><button onclick="deleteRow(this)">Delete</button></td>
+    </tr>
+  </tbody>
+</table>
+function deleteRow(button) {
+  // Get the row that contains the button.
+  var row = button.closest('tr');
+
+  // Remove the row from the table.
+  row.remove();
+}
+$(document).ready(function() {
+  // Add a click event handler to all "Delete" buttons.
+  $('.delete-button').click(function() {
+    // Get the row that contains the button.
+    var row = $(this).closest('tr');
+
+    // Remove the row from the table.
+    row.remove();
+  });
+});
+
         </div> -->
     </div>
 
@@ -217,6 +344,27 @@ else{
             errorMessage.textContent = "Passwords changed successfully";
             return true;
         }
+
+        function deleteRow(button) {
+        var row = button.closest('tr');
+
+        row.remove();
+        }
+
+        const showPopupButton = document.getElementById('showPopup');
+        const closePopupButton = document.getElementById('closePopup');
+        const popup = document.getElementById('popup');
+
+        function openPopup() {
+            popup.style.display = 'block';
+        }
+
+        function closePopup() {
+            popup.style.display = 'none';
+        }
+
+        showPopupButton.addEventListener('click', openPopup);
+        closePopupButton.addEventListener('click', closePopup);
     </script>
 </body>
 </html>

@@ -11,28 +11,12 @@
     <link rel="stylesheet" href="SubPageStyle.css">
 </head>
 <body>
-
     <div class="ellipse-1"></div>
     <div class="ellipse-2"></div>
-    
     <div class="mainContainer">
-        <div class="header">
-            <a href="index.php">
-                <h1>Campus Exchange</h1>
-            </a>
-            <div class="search-bar">
-                <form action="search.php" method="post">
-                    <input type="search" name = "search-input" id="" placeholder="Search for Products.. ">
-                    <button type="submit" id="search-btn">Search</button>
-                </form>
-            </div>
-            <div class="nav-btns">
-                <a href="sellerProfile.php"><button id="BtnSell">Sell</button></a>
-                <a href="cart.php"><button><i class="fa-solid fa-cart-shopping"></i></button></a>
-                <a href="userProfile.php"><button><i class="fa-solid fa-user"></i></button></a>
-            </div>
-        </div>
-
+        <?php
+            include '_header.php';
+        ?>
         <div class="productCategories">
             <div class="ElectronicsCategory">
                 <h1>Best of Electronics</h1>
@@ -43,29 +27,24 @@
                             <h6>Photography</h6>
                         </div>
                     </a>
-                    
                     <a href="individualCategoryItems.php?key=mobile">
                         <div class="imgcontainer">
                             <img src="images/mobileAccessories2.png" alt="b">
                             <h6>Mobile accessories</h6>
                         </div>
                     </a>
-                    
                     <a href="individualCategoryItems.php?key=speakers">
                         <div class="imgcontainer">
                             <img src="images/speakers.png" alt="b">
                             <h6>Speakers</h6>
                         </div>
                     </a>
-                    
                     <a href="individualCategoryItems.php?key=gaming">
                         <div class="imgcontainer">
                             <img src="images/gaming.png" alt="b">                        
                             <h6>Gaming</h6>
                         </div>
                     </a>
-                    
-                    
                 </div>
             </div>
             <div class="BooksCategory">
@@ -77,29 +56,24 @@
                             <h6>Entrance</h6>
                         </div>
                     </a>
-                    
                     <a href="individualCategoryItems.php?key=comics">
                         <div class="imgcontainer">
                             <img src="images/kidsBooks.png" alt="b">
                             <h6>Comics</h6>
                         </div>
                     </a>
-                    
                     <a href="individualCategoryItems.php?key=self-help">
                         <div class="imgcontainer">
                             <img src="images/books.png" alt="b">                        
                             <h6>Self-Help</h6>
                         </div>
                     </a>
-                    
                     <a href="individualCategoryItems.php?key=fantasy">
                         <div class="imgcontainer">
                             <img src="images/fantasyBooks.png" alt="b">
                             <h6>Fantasy</h6>
                         </div>
                     </a>
-                    
-                    
                 </div>
             </div>
             <div class="FashionCategory">
@@ -111,29 +85,24 @@
                             <h6>Mens Tshirts</h6>
                         </div>
                     </a>
-                    
                     <a href="individualCategoryItems.php?key=jeans">
                         <div class="imgcontainer">
                             <img src="images/mensJeans.png" alt="b">
                             <h6>Mens Jeans</h6>
                         </div>
                     </a>
-                    
                     <a href="individualCategoryItems.php?key=sarees">
                         <div class="imgcontainer">
                             <img src="images/womensSarees.png" alt="b">
                             <h6>Sarees</h6>
                         </div>
                     </a>
-                    
                     <a href="individualCategoryItems.php?key=kurtas">
                         <div class="imgcontainer">
                             <img src="images/mensKurta.png" alt="b">
                             <h6>Mens kurtas</h6>
                         </div>
                     </a>
-                    
-                    
                 </div>
             </div>
             <div class="SportsCategory">
@@ -145,33 +114,27 @@
                             <h6>Cricket</h6>
                         </div>
                     </a>
-                    
                     <a href="individualCategoryItems.php?key=badminton">
                         <div class="imgcontainer">
                             <img src="images/badminton2.png" alt="b">
                             <h6>Badminton</h6>
                         </div>
                     </a>
-                    
                     <a href="individualCategoryItems.php?key=cycling">
                         <div class="imgcontainer">
                             <img src="images/cycling.png" alt="b">
                             <h6>Cycling</h6>
                         </div>
                     </a>
-                    
                     <a href="individualCategoryItems.php?key=gym">
                         <div class="imgcontainer">
                             <img src="images/homeGym.png" alt="b">
                             <h6>Gym</h6>
                         </div>
                     </a>
-                    
-                    
                 </div>
             </div>
         </div>
     </div>
-
 </body>
 </html>

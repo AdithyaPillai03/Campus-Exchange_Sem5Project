@@ -14,7 +14,7 @@
 
     <div class="ellipse-1"></div>
     <div class="mainContainer">
-        <div class="header">
+        <!-- <div class="header">
             <a href="index.php">
                 <h1>Campus Exchange</h1>
             </a>
@@ -29,7 +29,10 @@
                 <a href="cart.php"><button><i class="fa-solid fa-cart-shopping"></i></button></a>
                 <a href="userProfile.php"><button><i class="fa-solid fa-user"></i></button></a>
             </div>
-        </div>
+        </div> -->
+        <?php
+            include '_header.php';
+        ?>
         <?php
             if (isset($_GET['key'])) {
                 $key = $_GET['key'];

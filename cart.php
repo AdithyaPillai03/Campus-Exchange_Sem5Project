@@ -16,13 +16,13 @@
     <div class="ellipse-2"></div>
 
     <div class="mainContainer">
-        <div class="header">
+        <!-- <div class="header">
             <a href="index.php">
                 <h1>Campus Exchange</h1>
             </a>
             <div class="search-bar">
                 <form action="search.php" method="post">
-                    <input type="search" name="search-input" id="" placeholder="Search for Products.. ">
+                    <input type="search" name = "search-input" id="" placeholder="Search for Products.. ">
                     <button type="submit" id="search-btn">Search</button>
                 </form>
             </div>
@@ -31,7 +31,10 @@
                 <a href="cart.php"><button><i class="fa-solid fa-cart-shopping"></i></button></a>
                 <a href="userProfile.php"><button><i class="fa-solid fa-user"></i></button></a>
             </div>
-        </div>
+        </div> -->
+        <?php
+            include '_header.php';
+        ?>
         <br>
         <br>
         <br>
