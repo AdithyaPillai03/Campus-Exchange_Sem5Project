@@ -39,7 +39,7 @@
                     $searchValue = $_POST['search-input'];
                 
                     include '_connection.php';
-                    $sql = "SELECT * FROM `products` where `keyword`='$searchValue'";
+                    $sql = "SELECT * FROM `products` WHERE `keyword` LIKE '%$searchValue%' OR `title` LIKE '%$searchValue%' OR `category` LIKE '%$searchValue%'";
                     $result = mysqli_query($conn, $sql);
                     $resultCount = mysqli_num_rows($result);
                     if ($resultCount > 0)

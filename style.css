@@ -311,7 +311,7 @@ a{
     margin: auto;
     padding: 30px;
     background: linear-gradient(145deg, white, #FFCB12);
-    margin-top: 5vh;
+    margin-top: 10vh;
     font-size: 24px;
     font-style: normal;
     color: #0E457B;
@@ -346,6 +346,7 @@ a{
 .feedback {
     max-width: 100%;
     margin: 0 auto;
+    margin-top: 8vh;
     padding: 2em;
     color: #0E457B;
     background-color: white;

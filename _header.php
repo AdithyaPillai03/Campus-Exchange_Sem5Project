@@ -25,7 +25,7 @@
 
 </head>
 <body>
-<div class="header">
+        <div class="header">
             <a href="index.php">
                 <h1>Campus Exchange</h1>
             </a>
@@ -47,3 +47,5 @@
                 <a href="userProfile.php"><button><i class="fa-solid fa-user"></i></button></a>
             </div>
         </div>
+        </body>
+</html>
