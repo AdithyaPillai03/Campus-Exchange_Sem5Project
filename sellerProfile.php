@@ -223,15 +223,16 @@ else{
                         $transactId = $row["transaction_id"];
 
                         echo "<tr>
-                                <td>User $email has requested '$productName'</td>
-                                <td><button id='showPopup'> Check transaction ID </button></td>
-                                <td><button onclick='deleteRow(this)'>Ignore</button></td>
-                                </tr><div id='popup' class='popup'>
-                                <h2>Transaction id for this product is: </h2>
-                                <p>$transactId</p>
-                                <p style='color: red;'>Match this ID with the ID that the customer will show you on meetup</p>
-                                <button id='closePopup'>Close</button>
-                        </div>";
+                                    <td>User $email has requested '$productName'</td>
+                                    <td><button class='showPopup'> Check transaction ID </button></td>
+                                    <td><button onclick='deleteRow(this)'>Ignore</button></td>
+                                </tr>
+                                <div id='popup' class='popup'>
+                                    <h2>Transaction id for this product is: </h2>
+                                    <p>$transactId</p>
+                                    <p style='color: red;'>Match this ID with the ID that the customer will show you on meetup</p>
+                                    <button class='closePopup'>Close</button>
+                                </div>";
                     }
 
                     echo "</table>";
@@ -351,20 +352,42 @@ $(document).ready(function() {
         row.remove();
         }
 
-        const showPopupButton = document.getElementById('showPopup');
-        const closePopupButton = document.getElementById('closePopup');
-        const popup = document.getElementById('popup');
+        // const showPopupButton = document.getElementById('showPopup');
+        // const closePopupButton = document.getElementById('closePopup');
+        // const popup = document.getElementById('popup');
 
-        function openPopup() {
-            popup.style.display = 'block';
+        // function openPopup() {
+        //     popup.style.display = 'block';
+        // }
+
+        // function closePopup() {
+        //     popup.style.display = 'none';
+        // }
+        // showPopupButton.addEventListener('click', openPopup);
+        // closePopupButton.addEventListener('click', closePopup);
+
+
+        const showPopupButtons = document.querySelectorAll('.showPopup');
+        const popups = document.querySelectorAll('.popup');
+        const closePopupButtons = document.querySelectorAll('.closePopup');
+
+        // Function to open the corresponding popup
+        function openPopup(index) {
+            popups[index].style.display = 'block';
         }
 
-        function closePopup() {
-            popup.style.display = 'none';
+        // Function to close the corresponding popup
+        function closePopup(index) {
+            popups[index].style.display = 'none';
         }
 
-        showPopupButton.addEventListener('click', openPopup);
-        closePopupButton.addEventListener('click', closePopup);
-    </script>
+        // Attach click event listeners to all buttons
+        showPopupButtons.forEach((button, index) => {
+            button.addEventListener('click', () => openPopup(index));
+        });
+        closePopupButtons.forEach((button, index) => {
+            button.addEventListener('click', () => closePopup(index));
+        });
+            </script>
 </body>
 </html>

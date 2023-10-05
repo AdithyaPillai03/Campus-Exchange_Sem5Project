@@ -153,3 +153,8 @@ form button:hover{
     font-size: 26px;
     color: #0E457B;
 }
+
+.purchaseDetails img{
+    height: 20vh;
+    width: 20vh;
+}

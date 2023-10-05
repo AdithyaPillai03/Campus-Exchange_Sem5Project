@@ -60,11 +60,40 @@ if (!isset($_SESSION['userID']))
         <div class="purchaseHistory">
             <h3>Purchase History: </h3>
             <div class="purchaseDetails">
-                <div class="prod1">
-                    <img src="images/cricketBat.png" alt="">
-                    <p>Cricket willow bat</p>
-                </div>
-                <div class="prod1">
+                <?php 
+                    $id = $_SESSION['userID'];
+                    include '_connection.php';
+                    $sql = "SELECT 
+                            t.transaction_id, p.prod_id, p.title, p.img_loc
+                        FROM 
+                            transactiondetails t
+                        JOIN 
+                            products p ON t.prod_id = p.prod_id
+                        WHERE 
+                            t.user_id = '$id'";
+                    // "SELECT prod_id FROM `transactiondetails` where seller_id = '$id'";
+                    $result = mysqli_query($conn, $sql);
+                    $resultCount = mysqli_num_rows($result);
+
+                    if ($resultCount > 0) {
+                        // echo "<h2 style='font-family: Poppins, sans-serif; font-size: 36px; color: #0E457B;'>ORDERS</h2>";
+                        while ($row = mysqli_fetch_assoc($result)) {
+                            $productImg = $row["img_loc"];
+                            $productName = $row["title"];
+                            $transactId = $row["transaction_id"];
+                            echo '
+                            <div class="prod1">
+                                <img src="userUploads/'.$productImg.'" alt="">
+                                <p>'.$productName.'</p>
+                                <p>Transaction id is '.$transactId.'</p>
+                            </div>';
+                        }
+                    }
+                    else{
+                        echo "<p>You haven't yet purchased anything. Your purchase history will be displayed here after any purchase.</p>";
+                    }
+                ?>
+                <!-- <div class="prod1">
                     <img src="images/canonEOSm50.png" alt="">
                     <p>Canon EOS m50</p>
                 </div>
@@ -75,7 +104,9 @@ if (!isset($_SESSION['userID']))
                 <div class="prod1">
                     <img src="images/speakers.png" alt="">
                     <p>Boat stone 500</p>
-                </div>
+                </div> -->
+
+
             </div>
         </div>
     </div>

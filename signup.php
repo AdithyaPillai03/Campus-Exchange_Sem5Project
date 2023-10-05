@@ -76,11 +76,21 @@
                 <div class="formGrp">
                     <label for="classSelect">Select class:</label>
                     <select id="classSelect" name="classSelect">
-                        <option value="fycs">F.Y.Bsc CS</option>
+                    <option value="fycs">F.Y.Bsc CS</option>
                         <option value="fybcom">F.Y.BCOM</option>
                         <option value="fyit">F.Y.Bsc IT</option>
                         <option value="fybba">F.Y.B.B.A</option>
                         <option value="fybaf">F.Y.B.A.F</option>
+                        <option value="sycs">S.Y.Bsc CS</option>
+                        <option value="sybcom">S.Y.BCOM</option>
+                        <option value="syit">S.Y.Bsc IT</option>
+                        <option value="sybba">S.Y.B.B.A</option>
+                        <option value="sybaf">S.Y.B.A.F</option>
+                        <option value="tycs">T.Y.Bsc CS</option>
+                        <option value="tybcom">T.Y.BCOM</option>
+                        <option value="tyit">T.Y.Bsc IT</option>
+                        <option value="tybba">T.Y.B.B.A</option>
+                        <option value="tybaf">T.Y.B.A.F</option>
                       </select>
                 </div>
                 <div class="formGrp">
