@@ -158,42 +158,42 @@ else{
         <br>        
         <div class="orderReqTable">
             <!-- <?php
-                $id = $_SESSION['userID'];
-                include '_connection.php';
-                        $sql = "SELECT * FROM `transactiondetails` where `seller_id`='$id'";
-                        $result = mysqli_query($conn, $sql);
-                        $resultCount = mysqli_num_rows($result);
-                        if ($resultCount > 0)
-                        {
-                            echo "<h2 style='font-style: Poppins, sans-serif;font-size: 36px;color: #0E457B;'>ORDERS</h2>";
-                            echo "<table>
-                                    <tr>
-                                        <th>Requests</th>
-                                        <th>Action</th>
-                                    </tr>";
-                            while ($row = mysqli_fetch_assoc($result)) {
-                                $user_id = $row["user_id"];
-                                $prod_id = $row["prod_id"];
+                // $id = $_SESSION['userID'];
+                // include '_connection.php';
+                //         $sql = "SELECT * FROM `transactiondetails` where `seller_id`='$id'";
+                //         $result = mysqli_query($conn, $sql);
+                //         $resultCount = mysqli_num_rows($result);
+                //         if ($resultCount > 0)
+                //         {
+                //             echo "<h2 style='font-style: Poppins, sans-serif;font-size: 36px;color: #0E457B;'>ORDERS</h2>";
+                //             echo "<table>
+                //                     <tr>
+                //                         <th>Requests</th>
+                //                         <th>Action</th>
+                //                     </tr>";
+                //             while ($row = mysqli_fetch_assoc($result)) {
+                //                 $user_id = $row["user_id"];
+                //                 $prod_id = $row["prod_id"];
 
 
-                                $sql2 = "SELECT title,img_loc FROM `products` where prod_id = '$prod_id'";
-                                $result2 = mysqli_query($conn, $sql2);
-                                $resultCount2 = mysqli_num_rows($result2);
-                                $row2 = mysqli_fetch_assoc($result2);
-                                $name = $row2['title'];
-                                echo "<tr>
-                                    <td> User $user_id has ordered for product $name</td>
-                                    <td><a href='index.php'><button> Check transaction ID </button></a></td>
-                                </tr>";
-                                // echo "<h2> User $user_id has ordered for product $name</h2>";
-                                // echo "<button> click </button>";
-                            }
-                            echo "</table>";
-                        }
-                        else{
-                            echo "<h1> No Product requests yet";
-                        }
-                        $conn->close();
+                //                 $sql2 = "SELECT title,img_loc FROM `products` where prod_id = '$prod_id'";
+                //                 $result2 = mysqli_query($conn, $sql2);
+                //                 $resultCount2 = mysqli_num_rows($result2);
+                //                 $row2 = mysqli_fetch_assoc($result2);
+                //                 $name = $row2['title'];
+                //                 echo "<tr>
+                //                     <td> User $user_id has ordered for product $name</td>
+                //                     <td><a href='index.php'><button> Check transaction ID </button></a></td>
+                //                 </tr>";
+                //                 // echo "<h2> User $user_id has ordered for product $name</h2>";
+                //                 // echo "<button> click </button>";
+                //             }
+                //             echo "</table>";
+                //         }
+                //         else{
+                //             echo "<h1> No Product requests yet";
+                //         }
+                //         $conn->close();
             ?> -->
             <?php
                 $id = $_SESSION['userID'];

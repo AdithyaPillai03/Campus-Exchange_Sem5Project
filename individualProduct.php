@@ -34,7 +34,7 @@
         <div class="product">
             <div class="imgContainer">
                 <?php
-                session_start();
+                // session_start();
                 // print_r( $_SESSION['cart']);
                     if (isset($_GET['name'])) {
                         $name = $_GET['name'];

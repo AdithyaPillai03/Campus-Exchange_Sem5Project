@@ -2,7 +2,8 @@
 session_start();
     if (!isset($_SESSION['userID'])) 
     {
-        $_SESSION['returnURL'] = $_SERVER['REQUEST_URI']; 
+        // $_SESSION['returnURL'] = $_SERVER['REQUEST_URI']; 
+        $_SESSION['returnURL'] = 'cart.php'; 
         echo "<script>
             alert('Please login first.');
             window.location.href = 'login.php';
