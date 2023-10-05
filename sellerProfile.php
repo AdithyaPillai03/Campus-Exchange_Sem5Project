@@ -56,12 +56,12 @@ else{
             <a href="logout.php"><button>Logout</button></a>
         </div>
         <div class="passAlter" id="passAlter" style="display: none;">
-            <form action="" onsubmit="return validatePassword()">
+            <form action="_changePassword.php" onsubmit="return validatePassword()" method="POST">
                 <label for="oldPass">Enter old Password:</label>
-                <input type="password" id ="oldPass" required>
+                <input type="password" id ="oldPass" name="oldPass" required>
                 <br>
                 <label for="newPass1">Enter new Password:</label>
-                <input type="password" id ="newPass1" required>
+                <input type="password" id ="newPass1" name="newPass1" required>
                 <br>
                 <label for="newPass2">Confirm new Password:</label>
                 <input type="password" id ="newPass2" required>
@@ -70,7 +70,9 @@ else{
             </form>
             <div id="error-message" style="color: red;"></div>
         </div>
-
+        <br>
+        <br>
+        <br>
         <div class="buttons">
             <button type="submit" id="addProduct">Add Item</button>
             <button type="submit" id="delProduct">Delete Item</button>
@@ -209,7 +211,7 @@ else{
                 $resultCount = mysqli_num_rows($result);
 
                 if ($resultCount > 0) {
-                    echo "<h2 style='font-family: Poppins, sans-serif; font-size: 36px; color: #0E457B;'>ORDERS</h2>";
+                    echo "<h2 style='font-family: Poppins, sans-serif; font-size: 36px; color: #0E457B; text-align:center;'>ORDERS</h2>";
                     echo "<table>
                             <tr>
                                 <th>Requests</th>
@@ -342,8 +344,8 @@ $(document).ready(function() {
                 errorMessage.textContent = "Passwords do not match!";
                 return false; 
             }
-            errorMessage.textContent = "Passwords changed successfully";
-            return true;
+            // errorMessage.textContent = "Passwords changed successfully";
+            // return true;
         }
 
         function deleteRow(button) {

@@ -3,7 +3,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
     include '_connection.php';
     $prodSelect = $_POST['prodSelect'];
    // UPDATE `products` SET `description` = 'very speed,too many ads,descent cameras, good display,good battery,good !' WHERE `products`.`prod_id` = 4;
-    // Initialize an empty array to store the update statements
+    // Initializing an empty array to store the update statements
     $updates = array();
 
     // Check if each field is set and add it to the update statements
@@ -27,7 +27,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
         $updates[] = "keyword = '$newKeywords'";
     }
 
-    // Construct the SQL query based on the updates array
     $updateQuery = "UPDATE products SET " . implode(", ", $updates) . " WHERE title = '$prodSelect'";
 
     // Execute the query

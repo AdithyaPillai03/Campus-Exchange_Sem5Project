@@ -42,12 +42,12 @@ if (!isset($_SESSION['userID']))
             <a href="logout.php">Logout</a>
         </div>
         <div class="passAlter" id="passAlter" style="display: none;">
-            <form action="" onsubmit="return validatePassword()">
+            <form action="_changePassword.php" onsubmit="return validatePassword()" method="POST">
                 <label for="oldPass">Enter old Password:</label>
-                <input type="password" id ="oldPass" required>
+                <input type="password" id ="oldPass" name="oldPass" required>
                 <br>
                 <label for="newPass1">Enter new Password:</label>
-                <input type="password" id ="newPass1" required>
+                <input type="password" id ="newPass1" name="newPass1" required>
                 <br>
                 <label for="newPass2">Confirm new Password:</label>
                 <input type="password" id ="newPass2" required>
@@ -133,8 +133,8 @@ if (!isset($_SESSION['userID']))
                 errorMessage.textContent = "Passwords do not match!";
                 return false; 
             }
-            errorMessage.textContent = "Passwords changed successfully";
-            return true;
+            // errorMessage.textContent = "Passwords changed successfully";
+            // return true;
         }
     </script>
 </body>
