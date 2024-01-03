@@ -12,21 +12,33 @@
 </head>
 <body>
     <div class="mainContainer">
-        <div class="header">
-            <a href="index.html">
+        <!-- <div class="header">
+            <a href="index.php">
                 <h1>Campus Exchange</h1>
             </a>
             <div class="search-bar">
-                <input type="search" id="search-input" placeholder="Search for Products.. ">
-                <a href="products.html"><button type="submit" id="search-btn">Search</button></a>
+                <form action="search.php" method="post">
+                    <input type="search" name = "search-input" id="" placeholder="Search for Products.. ">
+                    <button type="submit" id="search-btn">Search</button>
+                </form>
             </div>
             <div class="nav-btns">
-                <a href="sellerProfile.html"><button id="BtnSell">Sell</button></a>
-                <a href="home.html"><button><i class="fa-solid fa-cart-shopping"></i></button></a>
-                <a href="userProfile.html"><button><i class="fa-solid fa-user"></i></button></a>
+                <a href="sellerProfile.php"><button id="BtnSell">Sell</button></a>
+                <a href="cart.php"><button><i class="fa-solid fa-cart-shopping"></i></button></a>
+                <a href="userProfile.php"><button><i class="fa-solid fa-user"></i></button></a>
             </div>
-        </div>
-
+        </div> -->
+        <?php
+            include '_header.php';
+        ?>
+        <br>
+        <br>
+        <?php
+            // session_start();
+            if (isset($_SESSION['user'])) {
+                echo "<h1 class='welcomeMsg'>Hello {$_SESSION['user']}</h1>";
+            }
+        ?>
         <div class="hero">
             <div class="hero-content">
                 <div class="hero-heads">
@@ -42,8 +54,8 @@
                     <h6>SELL WHAT YOU DON'T</h6>
                 </div>
                 <div class="hero-buttons">
-                    <a href="signup.html"><button id="Join-Cta">Join Now</button></a>
-                    <a href="allDeals.html"><button id="Deals-Cta">Discover deals</button></a>
+                    <a href="signup.php"><button id="Join-Cta">Join Now</button></a>
+                    <a href="allDeals.php"><button id="Deals-Cta">Discover deals</button></a>
                 </div>
             </div>
                 <img id="hero-image" src="images/shopping_cart.jpg" alt="shopping_cart">
@@ -53,25 +65,25 @@
             <h1>Shop By Category</h1>
             <div class="cat">
                     <div class="cat1">
-                        <a href="categoryBooks.html">
+                        <a href="categoryBooks.php">
                             <img src="images/stackOfBooks.jpg" alt="stackOfBooks">
                             <h2>Books</h2>
                         </a>
                     </div>
                     <div class="cat1">
-                        <a href="categoryElectronics.html">
+                        <a href="categoryElectronics.php">
                             <img src="images/electonics.jpg" alt="electonics">
                             <h2>Electronics</h2>
                         </a>
                     </div>
                     <div class="cat1">
-                        <a href="categoryFashion.html">
+                        <a href="categoryFashion.php">
                             <img src="images/fashion.jpg" alt="fashion">
                             <h2>Fashion</h2>
                         </a>
                     </div>
                     <div class="cat1">
-                        <a href="categorySports.html">
+                        <a href="categorySports.php">
                             <img src="images/sports.jpg" alt="sports">
                             <h2>Sports</h2>
                         </a>
@@ -103,8 +115,27 @@
         <div class="becomeSellerCta">
             <h1>Become A Seller</h1>
             <p>Turn your unused items into cash effortlessly. Become a seller on our marketplace app and connect with a vibrant community of buyers. List, sell, and earn with ease. Join Today!</p>
-            <a href="register.html"><button>START SELLING NOW</button></a>
+            <a href="sellerSignup.php"><button>START SELLING NOW</button></a>
+        </div>
+        <br>
+        <br>
+    
+        <div class="feedback">
+            <h1>Send Us Your Feedback</h1>
+            <form id="feedback-form" action="feedback.php" method="post">
+                <label for="fbname">Name:</label>
+                <input type="text" id="fbname" name="fbname" required>
+                <label for="fbemail">Email:</label>
+                <input type="email" id="fbemail" name="fbemail" required>
+                <label for="feedback">Feedback:</label>
+                <textarea id="feedback" name="feedback" rows="6" required></textarea>
+                <button type="submit">Submit Feedback</button>
+            </form>
         </div>
     </div>
+    
+    <?php
+            include '_footer.php';
+        ?>
 </body>
 </html>

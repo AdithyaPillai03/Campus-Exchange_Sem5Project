@@ -1,4 +1,3 @@
-
 *{
     margin: 0;
     box-sizing: border-box;
@@ -15,23 +14,18 @@ body{
     display: block;
     overflow: auto;
     overflow-x: hidden;
-    /* background: lightsalmon; */
 }
-/* 
-html,body{
-    height:100%;
-} */
 
 .ellipse-1 {
     position: absolute;
     background-color: #FFCB12;
     z-index: -1;
     width: 60vw;
-    height: 70vh;
-    top: 20%;
+    height: 55vh;
+    top: 10%;
     left: -15%;
     border-radius: 50%;
-    transform: rotate(32deg);
+    transform: rotate(124deg);
 }
 
 .ellipse-2 {
@@ -39,47 +33,26 @@ html,body{
     background-color: rgb(255, 203, 18);
     z-index: -1;
     width: 60vw;
-    height: 70vh;
-    top: 130vh;
+    height: 55vh;
+    top: 70vh;
     right: -24vw;
     border-radius: 50%;
-    transform: rotate(323deg);
+    transform: rotate(328deg);
 }
-
-/* .ellipse-3 {
-    position: absolute;
-    background-color: #6361d5;
-    z-index: -1;
-    width: 2000px;
-    height: 800px;
-    bottom: 10%;
-    left: -80%;
-    border-radius: 50%;
-    transform: rotate(-15deg);
-} */
 
 
 .mainContainer{
-    /* background: red;  */
     /* background: rgb(179, 236, 255);  */
-    /* position: relative; */
-    /* overflow-y: auto; */
-    /* z-index: 1; */
-    width: 90vw;
-    margin-left: 5vw;
-    margin-right: 5vw;
+    width: 80vw;
+    margin-left: 10vw;
+    margin-right: 10vw;
     margin-top: 3vh;
-    height: 100%;
-    /* flex: 1; */
 }
 
 /* header */
 
 .header{
-    /* background: rgb(179, 236, 255); */
-    width:89%;
-    margin-left: 5.5%;
-    margin-right: 5.5%;
+    width:100%;
     height: 8vh;
     display: flex;
     align-items: center;
@@ -87,13 +60,12 @@ html,body{
 }
 
 .header h1{
-    width: 150.57px;
+    width: 7.8vw;
     font-weight: 900;
     color: #0E457B; 
     font-family: 'Playfair Display', serif;
     font-style: italic;
 }
-
 .search-bar{
     /* background: red; */
     /* flex: 1; */
@@ -183,79 +155,92 @@ html,body{
 }
 
 
-/* Alldeals Page */
 
-/* productCategories */
-
-.productCategories{
-    margin-top: 10vh;
-    width: 100%;
-    font-size: 24px;
-    padding-bottom: 20px;
+button{
+    cursor: pointer;
 }
 
-.productCategories h1{
-    font-style: normal;
-    color: #0E457B;
-}
 
-.images{
+.cart{
     display: flex;
-    width: 100%;
-    height: 18vw;
-    align-items: center;
     justify-content: space-between;
-    /* background: lightblue; */
+    /* align-items: center; */
+    /* background: rgb(198, 185, 37); */
+    margin-top: 3vh;
 }
 
-.images a{
-    width: 24%;
-    height: 100%;
-    /* background: lightgreen; */
-    
+.prodDetails{
+    flex: 1;
 }
 
-.imgcontainer{
-    /* background: lightcoral; */
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
+.product{
     display: flex;
-    flex-direction: column; 
-    align-items: center;
-    margin-top: 20px;
-    transition: box-shadow 0.3s ease;
+    /* background: red; */
+    margin-top: 2vh;
 }
 
-.imgcontainer:hover {
-    box-shadow: 0 0 10px rgba(109, 108, 108, 0.3); 
-}
-
-.imgcontainer img{
-    width: 80%;
-    height: 80%;
+.product img{
+    height: 25vh;
+    width: 15vw;
     object-fit: cover;
-    margin: auto;
 }
 
-.imgcontainer h6{
-    font-size: 30px;
+.details{
+    /* background: blue; */
+    padding: 3vw;
+    font-size: 24px;
+}
+
+.details{
+    font-size: 24px;
+}
+
+.details h3{
+    font-family: 'Playfair Display', serif;
+}
+
+.details h5{
     font-family: 'Poppins', sans-serif;
-    font-weight: 400;
 }
 
-.ElectronicsCategory{
-    margin-top: 15vh;
+.details button{
+    height: 30px;
+    width: 150px;
+    color: white;
+    background-color: #0E457B;
+    border-radius: 30px;
+    border: none;
+    transition: all ease 0.1s;
 }
 
-.BooksCategory{
-    margin-top: 15vh;
+.details button:hover{
+    background-color: #86b5e4;
+    color: black;
 }
 
-.FashionCategory{
-    margin-top: 15vh;
+.orderDetails{
+    position: fixed;
+    top: 30%;
+    right: 10%;
+    padding: 3%;
+    height: 30vh;
+    border: 2px solid #0E457B;
+    border-radius: 30px;
 }
 
-.SportsCategory{
-    margin-top: 15vh;
+.orderDetails button{
+    height: 40px;
+    width: 200px;
+    font-size: 24px;
+    color: white;
+    border: none;
+    background-color: #FFCB12;
+    border-radius: 30px;
+    transition: all ease 0.1s;
+}
+
+.orderDetails button:hover{
+    background-color: #eee5c5;
+    color: black;
+    font-size: 25px;
 }

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Campus Exchange</title>
+    <title>Campus Exchange | Fashion</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,31 +16,36 @@
     <div class="ellipse-2"></div>
 
     <div class="mainContainer">
-        <div class="header">
-            <a href="index.html">
+        <!-- <div class="header">
+            <a href="index.php">
                 <h1>Campus Exchange</h1>
             </a>
             <div class="search-bar">
-                <input type="search" id="search-input" placeholder="Search for Products.. ">
-                <a href="products.html"><button type="submit" id="search-btn">Search</button></a>
+                <form action="search.php" method="post">
+                    <input type="search" name = "search-input" id="" placeholder="Search for Products.. ">
+                    <button type="submit" id="search-btn">Search</button>
+                </form>
             </div>
             <div class="nav-btns">
-                <a href="home.html"><button id="BtnSell">Sell</button></a>
-                <a href="cart.html"><button><i class="fa-solid fa-cart-shopping"></i></button></a>
-                <a href="userProfile.html"><button><i class="fa-solid fa-user"></i></button></a>
+                <a href="sellerProfile.php"><button id="BtnSell">Sell</button></a>
+                <a href="cart.php"><button><i class="fa-solid fa-cart-shopping"></i></button></a>
+                <a href="userProfile.php"><button><i class="fa-solid fa-user"></i></button></a>
             </div>
-        </div>
+        </div> -->
+        <?php
+            include '_header.php';
+        ?>
         <div class="Category">
             <h1>Shop Fashion</h1>
             <div class="row">
-                <a href="MensTshirt.html">
+                <a href="individualCategoryItems.php?key=mens-tshirt">
                     <div class="imgcontainer">
                         <img src="images/mensTshirt.png" alt="b">
                         <h6>Mens Tshirts</h6>
                     </div>
                 </a>
                 
-                <a href="jeans.html">
+                <a href="individualCategoryItems.php?key=jeans">
                     <div class="imgcontainer">
                         <img src="images/mensJeans.png" alt="b">
                         <h6>Mens Jeans</h6>
@@ -48,14 +53,14 @@
                 </a>
             </div>
             <div class="row">
-                <a href="sarees.html">
+                <a href="individualCategoryItems.php?key=sarees">
                     <div class="imgcontainer">
                         <img src="images/womensSarees.png" alt="b">
                         <h6>Sarees</h6>
                     </div>
                 </a>
                 
-                <a href="kurtas.html">
+                <a href="individualCategoryItems.php?key=kurtas">
                     <div class="imgcontainer">
                         <img src="images/mensKurta.png" alt="b">
                         <h6>Mens kurtas</h6>
